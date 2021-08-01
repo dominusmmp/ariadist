@@ -12,7 +12,7 @@
     <meta name="description" content="Aria Rad - Rope Access" />
     <meta name="keywords" content="Aria Rad - Rope Access" />
     <meta name="author" content="Aria Rad - Rope Access" />
-    <link href="./assets/logo.db259dc1.png" rel="shortcut icon" />
+    <link href="./assets/logo.fc9836c8.png" rel="shortcut icon" />
     <title>Aria Rad - Rope Access</title>
     <link rel="home" href="https://ariarad-co.com" />
     <!-- END: HTML Meta Tags -->
@@ -40,13 +40,13 @@
     
     <!-- Delete This Line In Production Mode -->
     
-  <script type="module" crossorigin src="./assets/index.84042fe9.js"></script>
-    <link rel="modulepreload" href="./assets/vendor.7507a2f8.js">
-    <link rel="stylesheet" href="./assets/index.35664de9.css">
+  <script type="module" crossorigin src="./assets/index.6945526e.js"></script>
+    <link rel="modulepreload" href="./assets/vendor.7cd78426.js">
+    <link rel="stylesheet" href="./assets/index.6c306dde.css">
   </head>
 
 <body>
-    <div class="app">
+    <div class="app" x-data="{mobileMenuOpen: false, toggleMenu() { this.mobileMenuOpen = ! this.mobileMenuOpen }}">
         <!-- BEGIN: Loader -->
         <!-- <div id="preloader"
             class="bg-theme-blue z-50 fixed top-0 bottom-0 left-0 right-0 w-screen h-screen overflow-hidden grid justify-center items-center select-none">
@@ -137,7 +137,7 @@
             class="navbar-side z-10 bg-white fixed lg:static top-0 right-0 left-0 flex items-center justify-between w-full min-h-mobile-nav lg:min-h-nav border-none mx-auto py-2 lg:py-0 px-2 lg:px-16 transition-all">
             <!-- BEGIN: Site Logo Mobile/Tablet -->
             <a href="#" class="lg:hidden mx-2">
-                <img src="./assets/logo.db259dc1.png" alt="" width="96" height="48" loading="lazy" />
+                <img src="./assets/logo.fc9836c8.png" alt="" width="96" height="48" loading="lazy" />
                 <span class="sr-only">Site Logo Mobile</span>
             </a>
             <!-- END: Site Logo Mobile/Tablet -->
@@ -187,7 +187,8 @@
                 <!-- BEGIN: Site Logo Desktop -->
                 <div class="hidden lg:inline-block ml-8 mr-2">
                     <a href="#">
-                        <img src="./assets/logo.db259dc1.png" alt="" width="96" height="48" loading="lazy" />
+                        <img src="./assets/logo.fc9836c8.png" alt="" class="w-auto max-h-12" width="96" height="48"
+                            loading="lazy" />
                         <span class="sr-only">Site Logo Desktop</span>
                     </a>
                 </div>
@@ -410,7 +411,7 @@
                                                 از طراحان گرافیک است.
                                             </p>
                                             <a href="#"
-                                                class="btn btn-md bg-theme hover:bg-theme-hover border-theme hover:border-theme-hover relative">
+                                                class="btn btn-md bg-theme-green hover:bg-theme-green-hover border-theme-green hover:border-theme-green-hover relative">
                                                 از اینجا شروع کنید
                                             </a>
                                         </div>
@@ -443,7 +444,7 @@
                                                 از طراحان گرافیک است.
                                             </p>
                                             <a href="#"
-                                                class="btn btn-md bg-theme hover:bg-theme-hover border-theme hover:border-theme-hover relative">
+                                                class="btn btn-md bg-theme-orange hover:bg-theme-orange-hover border-theme-orange hover:border-theme-orange-hover relative">
                                                 از اینجا شروع کنید
                                             </a>
                                         </div>
@@ -486,7 +487,7 @@
                         </div>
 
                         <!-- Slider Pagination -->
-                        <!-- <div class="swiper-pagination swiper-pagination-white"></div> -->
+                        <div class="swiper-pagination swiper-pagination-white"></div>
 
                         <!-- Slider Next/Prev Buttons -->
                         <div class="swiper-button-prev swiper-button-white"></div>
@@ -671,12 +672,13 @@
                         </div>
 
                         <!-- Service Item 01 -->
-                        <div class="card border hover:bg-gray-200 transition-colors select-none">
-                            <div class="card-body">
+                        <div class="card card-icon border hover:bg-gray-200 transition-colors select-none">
+                            <figure class="flex justify-center items-center mt-6 mx-auto">
                                 <div
-                                    class="card-icon bg-no-repeat bg-center w-36 h-36 flex justify-center items-center mb-6 mx-auto bg-theme rounded-full">
+                                    class="cards-icon flex justify-center items-center bg-theme rounded-full transform transition-all duration-500">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        class="w-16 h-16 text-white" viewBox="0 0 512 512">
+                                        class="w-16 h-16 text-white transform transition-all duration-500"
+                                        viewBox="0 0 512 512">
                                         <path
                                             d="M393.87 190a32.1 32.1 0 01-45.25 0l-26.57-26.57a32.09 32.09 0 010-45.26L382.19 58a1 1 0 00-.3-1.64c-38.82-16.64-89.15-8.16-121.11 23.57-30.58 30.35-32.32 76-21.12 115.84a31.93 31.93 0 01-9.06 32.08L64 380a48.17 48.17 0 1068 68l153.86-167a31.93 31.93 0 0131.6-9.13c39.54 10.59 84.54 8.6 114.72-21.19 32.49-32 39.5-88.56 23.75-120.93a1 1 0 00-1.6-.26z"
                                             fill="none" stroke="currentColor" stroke-linecap="round"
@@ -684,7 +686,9 @@
                                         <circle cx="96" cy="416" r="16" fill="currentColor" />
                                     </svg>
                                 </div>
+                            </figure>
 
+                            <div class="card-body">
                                 <h2 class="font-bold text-xl lg:text-2xl 2xl:text-3xl text-center mb-3">
                                     شستشوی نما
                                 </h2>
@@ -696,19 +700,21 @@
                         </div>
 
                         <!-- Service Item 02 -->
-                        <div class="card border hover:bg-gray-200 transition-colors select-none">
-                            <div class="card-body">
-                                <div
-                                    class="card-icon bg-no-repeat bg-center w-36 h-36 flex justify-center items-center mb-6 mx-auto bg-theme rounded-full">
+                        <div class="card card-icon border hover:bg-gray-200 transition-colors select-none">
+                            <figure class="flex justify-center items-center mt-6 mx-auto">
+                                <div class="cards-icon flex justify-center items-center bg-theme mask mask-hexagon-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        class="w-16 h-16 text-white" viewBox="0 0 512 512">
+                                        class="w-16 h-16 text-white transform scale-95 transition-all duration-500"
+                                        viewBox="0 0 512 512">
                                         <path
                                             d="M452.37 59.63h0a40.49 40.49 0 00-57.26 0L184 294.74c23.08 4.7 46.12 27.29 49.26 49.26l219.11-227.11a40.49 40.49 0 000-57.26zM138 336c-29.88 0-54 24.5-54 54.86 0 23.95-20.88 36.57-36 36.57C64.56 449.74 92.82 464 120 464c39.78 0 72-32.73 72-73.14 0-30.36-24.12-54.86-54-54.86z"
                                             fill="none" stroke="currentColor" stroke-linecap="round"
                                             stroke-linejoin="round" stroke-width="32" />
                                     </svg>
                                 </div>
+                            </figure>
 
+                            <div class="card-body">
                                 <h2 class="font-bold text-xl lg:text-2xl 2xl:text-3xl text-center mb-3">
                                     نقاشی نما
                                 </h2>
@@ -902,9 +908,7 @@
 
 
             <!-- BEGIN: Corp Video Section -->
-            <section id="corpvideo" class="hero bg-fixed min-h-section lg:min-h-section-lg relative"
-                style="background-image: url('./assets/bg03.jpg');">
-                <div class="hero-overlay bg-opacity-90"></div>
+            <section id="corpvideo" class="hero min-h-section lg:min-h-section-lg bg-rope bg-theme-green">
                 <div class="w-full h-full">
                     <div class="hero-conten w-full h-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-0">
 
@@ -930,7 +934,8 @@
                                         پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته
                                         اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
                                     </p>
-                                    <a href="#" class="btn btn-wide btn-success rounded-full">
+                                    <a href="#"
+                                        class="btn btn-wide bg-theme-orange border-theme-orange hover:bg-theme-orange-hover hover:border-theme-orange-hover rounded-full">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             class="w-5 h-5 inline-block ml-2" viewBox="0 0 512 512">
                                             <path fill="none" stroke="currentColor" stroke-linecap="round"
@@ -973,7 +978,7 @@
                             با تیم حرفه‌ای ما آشنا شوید
                         </h2>
                         <p class="text-sm lg:text-base mb-4">
-                            شرکت آریاراد با کادری مجرب آماده انجام هرگونه کار در ارتفاع می‌باشد.
+                            شرکت آریاراد متشکل از تیمی مجرب و متخصص دارای گواهینامه رسمی و با تجربه کافی می‌باشد.
                         </p>
                         <a href="#"
                             class="btn btn-sm btn-outline hover:bg-theme-hover hover:border-theme-hover rounded-full">
@@ -989,34 +994,26 @@
                                 <!-- Slide 01 -->
                                 <div class="swiper-slide">
                                     <!-- Card Post -->
-                                    <div class="card work-card grid rounded-none">
+                                    <div class="card team-card grid rounded-xl">
 
                                         <!-- Card Image -->
-                                        <figure class="row-start-1 col-start-1 aspect-w-8 aspect-h-10 z-0">
-                                            <img src="./assets/cardbg03.6e953729.jpg"
-                                                class="w-full h-full object-cover transition-all duration-500"
-                                                width="600" height="600" alt="Test Image" loading="lazy" />
+                                        <figure class="row-start-1 col-start-1 aspect-w-3 aspect-h-4 z-0">
+                                            <img src="https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg"
+                                                class="object-cover object-center filter grayscale transition-all duration-700"
+                                                width="300" height="400" alt="Test Image" loading="lazy" />
                                         </figure>
 
                                         <!-- Card Content -->
                                         <div
-                                            class="card-body overflow-hidden relative justify-end row-start-1 col-start-1 p-0 px-6 bg-black bg-opacity-0 transition-all duration-300">
-                                            <div class="card-content -mb-24 text-white p-2 transition-all duration-200">
-                                                <a href="#" class="inline-block mb-3">
-                                                    اطلاعات بیشتر
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                        class="w-4 h-4 inline-block" viewBox="0 0 512 512">
-                                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                            stroke-linejoin="round" stroke-width="48"
-                                                            d="M328 112L184 256l144 144" />
-                                                    </svg>
-                                                </a>
-                                                <h2 class="card-title 2xl:text-2xl">
-                                                    <a href="#"
-                                                        class="hover:text-theme-1 transition-colors duration-200">
-                                                        سازمان ارتباطات
-                                                    </a>
-                                                </h2>
+                                            class="card-body overflow-hidden relative row-start-1 col-start-1 p-1 opacity-0 transition-all duration-700">
+                                            <div
+                                                class="card-content w-full h-full flex flex-col justify-between border bottom-1 border-white rounded-xl text-white p-6">
+                                                <p class="card-title font-black 2xl:text-2xl">
+                                                    علی کمرزرین
+                                                </p>
+                                                <div class="flex flex-col">
+                                                    <a href="" class=""></a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1025,34 +1022,23 @@
                                 <!-- Slide 02 -->
                                 <div class="swiper-slide">
                                     <!-- Card Post -->
-                                    <div class="card work-card grid rounded-none">
+                                    <div class="card team-card grid rounded-xl">
 
                                         <!-- Card Image -->
-                                        <figure class="row-start-1 col-start-1 aspect-w-8 aspect-h-10 z-0">
-                                            <img src="./assets/cardbg04.bfd360dd.jpg"
-                                                class="w-full h-full object-cover transition-all duration-500"
-                                                width="600" height="600" alt="Test Image" loading="lazy" />
+                                        <figure class="row-start-1 col-start-1 aspect-w-3 aspect-h-4 z-0">
+                                            <img src="https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg"
+                                                class="object-cover object-center filter grayscale transition-all duration-700"
+                                                width="300" height="400" alt="Test Image" loading="lazy" />
                                         </figure>
 
                                         <!-- Card Content -->
                                         <div
-                                            class="card-body overflow-hidden relative justify-end row-start-1 col-start-1 p-0 px-6 bg-black bg-opacity-0 transition-all duration-300">
-                                            <div class="card-content -mb-24 text-white p-2 transition-all duration-200">
-                                                <a href="#" class="inline-block mb-3">
-                                                    اطلاعات بیشتر
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                        class="w-4 h-4 inline-block" viewBox="0 0 512 512">
-                                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                            stroke-linejoin="round" stroke-width="48"
-                                                            d="M328 112L184 256l144 144" />
-                                                    </svg>
-                                                </a>
-                                                <h2 class="card-title 2xl:text-2xl">
-                                                    <a href="#"
-                                                        class="hover:text-theme-1 transition-colors duration-200">
-                                                        سازمان ارتباطات
-                                                    </a>
-                                                </h2>
+                                            class="card-body overflow-hidden relative row-start-1 col-start-1 p-1 opacity-0 transition-all duration-700">
+                                            <div
+                                                class="card-content w-full h-full flex border bottom-1 border-white rounded-xl text-white p-6">
+                                                <p class="card-title font-black 2xl:text-2xl">
+                                                    مجتبی ادبی
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -1061,70 +1047,23 @@
                                 <!-- Slide 03 -->
                                 <div class="swiper-slide">
                                     <!-- Card Post -->
-                                    <div class="card work-card grid rounded-none">
+                                    <div class="card team-card grid rounded-xl">
 
                                         <!-- Card Image -->
-                                        <figure class="row-start-1 col-start-1 aspect-w-8 aspect-h-10 z-0">
-                                            <img src="./assets/cardbg05.5a235d40.jpg"
-                                                class="w-full h-full object-cover transition-all duration-500"
-                                                width="600" height="600" alt="Test Image" loading="lazy" />
+                                        <figure class="row-start-1 col-start-1 aspect-w-3 aspect-h-4 z-0">
+                                            <img src="https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg"
+                                                class="object-cover object-center filter grayscale transition-all duration-700"
+                                                width="300" height="400" alt="Test Image" loading="lazy" />
                                         </figure>
 
                                         <!-- Card Content -->
                                         <div
-                                            class="card-body overflow-hidden relative justify-end row-start-1 col-start-1 p-0 px-6 bg-black bg-opacity-0 transition-all duration-300">
-                                            <div class="card-content -mb-24 text-white p-2 transition-all duration-200">
-                                                <a href="#" class="inline-block mb-3">
-                                                    اطلاعات بیشتر
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                        class="w-4 h-4 inline-block" viewBox="0 0 512 512">
-                                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                            stroke-linejoin="round" stroke-width="48"
-                                                            d="M328 112L184 256l144 144" />
-                                                    </svg>
-                                                </a>
-                                                <h2 class="card-title 2xl:text-2xl">
-                                                    <a href="#"
-                                                        class="hover:text-theme-1 transition-colors duration-200">
-                                                        سازمان ارتباطات
-                                                    </a>
-                                                </h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Slide 04 -->
-                                <div class="swiper-slide">
-                                    <!-- Card Post -->
-                                    <div class="card work-card grid rounded-none">
-
-                                        <!-- Card Image -->
-                                        <figure class="row-start-1 col-start-1 aspect-w-8 aspect-h-10 z-0">
-                                            <img src="./assets/cardbg06.e3286cd4.jpg"
-                                                class="w-full h-full object-cover transition-all duration-500"
-                                                width="600" height="600" alt="Test Image" loading="lazy" />
-                                        </figure>
-
-                                        <!-- Card Content -->
-                                        <div
-                                            class="card-body overflow-hidden relative justify-end row-start-1 col-start-1 p-0 px-6 bg-black bg-opacity-0 transition-all duration-300">
-                                            <div class="card-content -mb-24 text-white p-2 transition-all duration-200">
-                                                <a href="#" class="inline-block mb-3">
-                                                    اطلاعات بیشتر
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                        class="w-4 h-4 inline-block" viewBox="0 0 512 512">
-                                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                            stroke-linejoin="round" stroke-width="48"
-                                                            d="M328 112L184 256l144 144" />
-                                                    </svg>
-                                                </a>
-                                                <h2 class="card-title 2xl:text-2xl">
-                                                    <a href="#"
-                                                        class="hover:text-theme-1 transition-colors duration-200">
-                                                        سازمان ارتباطات
-                                                    </a>
-                                                </h2>
+                                            class="card-body overflow-hidden relative row-start-1 col-start-1 p-1 opacity-0 transition-all duration-700">
+                                            <div
+                                                class="card-content w-full h-full flex border bottom-1 border-white rounded-xl text-white p-6">
+                                                <p class="card-title font-black 2xl:text-2xl">
+                                                    آل پاچینو
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -1169,7 +1108,7 @@
                                 <!-- Slide 01 -->
                                 <div class="swiper-slide">
                                     <!-- Card Post -->
-                                    <div class="card work-card grid rounded-none">
+                                    <div class="card work-card grid rounded-xl">
 
                                         <!-- Card Image -->
                                         <figure class="row-start-1 col-start-1 aspect-w-7 aspect-h-10 z-0">
@@ -1205,7 +1144,7 @@
                                 <!-- Slide 02 -->
                                 <div class="swiper-slide">
                                     <!-- Card Post -->
-                                    <div class="card work-card grid rounded-none">
+                                    <div class="card work-card grid rounded-xl">
 
                                         <!-- Card Image -->
                                         <figure class="row-start-1 col-start-1 aspect-w-7 aspect-h-10 z-0">
@@ -1241,7 +1180,7 @@
                                 <!-- Slide 03 -->
                                 <div class="swiper-slide">
                                     <!-- Card Post -->
-                                    <div class="card work-card grid rounded-none">
+                                    <div class="card work-card grid rounded-xl">
 
                                         <!-- Card Image -->
                                         <figure class="row-start-1 col-start-1 aspect-w-7 aspect-h-10 z-0">
@@ -1277,7 +1216,7 @@
                                 <!-- Slide 04 -->
                                 <div class="swiper-slide">
                                     <!-- Card Post -->
-                                    <div class="card work-card grid rounded-none">
+                                    <div class="card work-card grid rounded-xl">
 
                                         <!-- Card Image -->
                                         <figure class="row-start-1 col-start-1 aspect-w-7 aspect-h-10 z-0">
@@ -1318,8 +1257,181 @@
             </section>
             <!-- END: Works Section -->
 
+            <!-- BEGIN: FAQ -->
+            <section id="faq" class="mt-40 py-10 lg:py-20 min-h-section lg:min-h-section-lg">
+                <div class="container">
+                    <div class="p-6 lg:p-16 bg-gray-50 rounded-box">
+                        <!-- Section Title -->
+                        <div class="flex justify-center items-center mb-4">
+                            <h2 class="text-xl lg:text-2xl font-bold text-center">
+                                سوالات متداول
+                            </h2>
+                        </div>
+
+                        <!-- SEction Content -->
+                        <div class="grid grid-cols-1 place-items-center">
+                            <!-- Smooth Accordion -->
+                            <div class="w-full mx-auto" x-data="{selected:null}">
+                                <ul class="shadow-box">
+                                    <!-- Item 1 -->
+                                    <li
+                                        class="relative collapse rounded-box border border-base-300 collapse-arrow mb-2">
+                                        <button type="button" class="collapse-title text-xl font-medium pl-10"
+                                            @click="selected !== 1 ? selected = 1 : selected = null">
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-right">
+                                                    آیا کار در ارتفاع ایمن است؟
+                                                </span>
+                                                <span class="ico-plus"></span>
+                                            </div>
+                                        </button>
+                                        <div class="relative overflow-hidden transition-all max-h-0 duration-700"
+                                            style="" x-ref="container1"
+                                            x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                                            <div class="p-6">
+                                                <p>
+                                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                    استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
+                                                    ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                                                    کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                                                </p>
+                                                <p>
+                                                    کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه
+                                                    و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان
+                                                    رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد
+                                                    کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
+                                                    راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی
+                                                    دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا
+                                                    مورد استفاده قرار گیرد.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- Item 1 -->
+                                    <li
+                                        class="relative collapse rounded-box border border-base-300 collapse-arrow mb-2">
+                                        <button type="button" class="collapse-title text-xl font-medium pl-10"
+                                            @click="selected !== 2 ? selected = 2 : selected = null">
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-right">
+                                                    آیا افرادی که کار در ارتفاع را انجام می‌دهند، از تخصص لازم و بیمه
+                                                    برخوردارند؟
+                                                </span>
+                                                <span class="ico-plus"></span>
+                                            </div>
+                                        </button>
+                                        <div class="relative overflow-hidden transition-all max-h-0 duration-700"
+                                            style="" x-ref="container2"
+                                            x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
+                                            <div class="p-6">
+                                                <p>
+                                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                    استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
+                                                    ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                                                    کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                                                </p>
+                                                <p>
+                                                    کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه
+                                                    و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان
+                                                    رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد
+                                                    کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
+                                                    راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی
+                                                    دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا
+                                                    مورد استفاده قرار گیرد.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- Item 1 -->
+                                    <li
+                                        class="relative collapse rounded-box border border-base-300 collapse-arrow mb-2">
+                                        <button type="button" class="collapse-title text-xl font-medium pl-10"
+                                            @click="selected !== 3 ? selected = 3 : selected = null">
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-right">
+                                                    برای چه کارهایی میتوان از خدمات شرکت کار در ارتفاع آریاراد استفاده
+                                                    کرد؟
+                                                </span>
+                                                <span class="ico-plus"></span>
+                                            </div>
+                                        </button>
+                                        <div class="relative overflow-hidden transition-all max-h-0 duration-700"
+                                            style="" x-ref="container3"
+                                            x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
+                                            <div class="p-6">
+                                                <p>
+                                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                    استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
+                                                    ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                                                    کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                                                </p>
+                                                <p>
+                                                    کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه
+                                                    و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان
+                                                    رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد
+                                                    کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
+                                                    راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی
+                                                    دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا
+                                                    مورد استفاده قرار گیرد.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- Item 1 -->
+                                    <li
+                                        class="relative collapse rounded-box border border-base-300 collapse-arrow mb-2">
+                                        <button type="button" class="collapse-title text-xl font-medium pl-10"
+                                            @click="selected !== 4 ? selected = 4 : selected = null">
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-right">
+                                                    در چه مکان‌ها و شهرهایی می‌توان از خدمات شرکت آریاراد استفاده کرد؟
+                                                </span>
+                                                <span class="ico-plus"></span>
+                                            </div>
+                                        </button>
+                                        <div class="relative overflow-hidden transition-all max-h-0 duration-700"
+                                            style="" x-ref="container4"
+                                            x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''">
+                                            <div class="p-6">
+                                                <p>
+                                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                    استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
+                                                    ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                                                    کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                                                </p>
+                                                <p>
+                                                    کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه
+                                                    و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان
+                                                    رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد
+                                                    کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
+                                                    راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی
+                                                    دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا
+                                                    مورد استفاده قرار گیرد.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Desktop Contact Button -->
+                            <div class="rounded-box mt-4 mb-2 text-center hidden lg:block">
+                                <div class="collapse-title">
+                                    <a href="tel:0910000000"
+                                        class="btn btn-sm lg:btn-md btn-wide bg-theme-orange border-theme-orange hover:bg-theme-orange-hover hover:border-theme-orange-hover">
+                                        مشاوره رایگان تلفنی
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End: FAQ -->
+
             <!-- BEGIN: Blog Section -->
-            <section id="blog-posts" class="mt-40 py-10 lg:py-20 min-h-section lg:min-h-section-lg">
+            <section id="blog-posts" class="py-10 lg:py-20 min-h-section lg:min-h-section-lg">
                 <div class="container">
 
                     <!-- Section Title -->
@@ -1679,12 +1791,824 @@
             </section>
             <!-- END: Blog Section -->
 
+            <!-- BEGIN: Instagram Section -->
+            <section id="instagram-feeds"
+                class="py-10 lg:py-20 min-h-section lg:min-h-section-lg bg-rope bg-theme-green">
+                <div class="container">
+                    <!-- Section Title -->
+                    <div class="w-max max-w-full mb-8 text-center text-white mx-auto">
+                        <h2 class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-bold mb-4">
+                            ما را در شبکه‌های اجتماعی دنبال کنید
+                        </h2>
+                        <p class="text-sm lg:text-base mb-4">
+                            آخرین پروژه‌ها و آموزش‌های ما را در اینستاگرام ما دنبال کنید.
+                        </p>
+                        <a href="#"
+                            class="btn btn-sm btn-outline text-white hover:bg-theme-orange hover:border-theme-orange-hover rounded-full">
+                            ورود به پیج اینستاگرام آریاراد
+                        </a>
+                    </div>
+
+                    <!-- Section Content -->
+                    <div class="w-full">
+                        <div class="max-w-md mx-auto">
+                            <div
+                                class="bg-gray-300 border text-white select-none p-3 flex justify-between items-center">
+                                <button
+                                    class="btn btn-sm btn-ghost hover:bg-transparent text-black font-lato">Follow</button>
+                                <div class="flex items-center">
+                                    <span
+                                        class="font-lato ml-2 text-lg font-bold text-black filter blur-sm animate-pulse">Username</span>
+                                    <div class="w-10 h-10 bg-white border rounded-full animate-pulse">.</div>
+                                </div>
+                            </div>
+                            <div class="aspect-w-1 aspect-h-1">
+                                <div class="grid grid-cols-3 bg-gray-300">
+                                    <div class="bg-white border text-white select-none animate-pulse">.</div>
+                                    <div class="bg-white border text-white select-none animate-pulse">.</div>
+                                    <div class="bg-white border text-white select-none animate-pulse">.</div>
+                                    <div class="bg-white border text-white select-none animate-pulse">.</div>
+                                    <div class="bg-white border text-white select-none animate-pulse">.</div>
+                                    <div class="bg-white border text-white select-none animate-pulse">.</div>
+                                    <div class="bg-white border text-white select-none animate-pulse">.</div>
+                                    <div class="bg-white border text-white select-none animate-pulse">.</div>
+                                    <div class="bg-white border text-white select-none animate-pulse">.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- END: Instagram Section -->
+
+            <!-- BEGIN: Blog Section -->
+            <section id="testimonial-posts" class="py-10 lg:py-20 min-h-section lg:min-h-section-lg">
+                <div class="container">
+
+                    <!-- Section Title -->
+                    <div class="w-max max-w-full mb-8 text-center mx-auto">
+                        <h2 class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-bold mb-4">
+                            مشتریان‌ ما درباره ما چه می‌گویند
+                        </h2>
+                        <p class="text-sm lg:text-base mb-4">
+                            نظرات شما برای ما بسیار مهم است و هدف ما جلب رضایت شماست.
+                        </p>
+                    </div>
+
+                    <!-- Section Content -->
+                    <div class="w-full">
+                        <div id="testimonial-slider" class="swiper-container">
+                            <div class="swiper-wrapper">
+
+                                <!-- Slide 01 -->
+                                <div class="swiper-slide">
+                                    <!-- Card Post -->
+                                    <div class="aspect-w-2 aspect-h-1 p-8">
+                                        <div class="testimonial-card relative h-full border p-6 rounded-box transition-all bg-white">
+
+                                            <!-- Card Image -->
+                                            <figure class="absolute -left-5 -top-5 text-theme-orange">
+                                                <svg aria-hidden="true" focusable="false" role="img" class="w-10 h-10"
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                                    <g>
+                                                        <path fill="currentColor"
+                                                            d="M464 256h-80v-64a64.06 64.06 0 0 1 64-64h8a23.94 23.94 0 0 0 24-23.88V56a23.94 23.94 0 0 0-23.88-24H448a160 160 0 0 0-160 160v240a48 48 0 0 0 48 48h128a48 48 0 0 0 48-48V304a48 48 0 0 0-48-48z"
+                                                            opacity="50%"></path>
+                                                        <path fill="currentColor"
+                                                            d="M176 256H96v-64a64.06 64.06 0 0 1 64-64h8a23.94 23.94 0 0 0 24-23.88V56a23.94 23.94 0 0 0-23.88-24H160A160 160 0 0 0 0 192v240a48 48 0 0 0 48 48h128a48 48 0 0 0 48-48V304a48 48 0 0 0-48-48z">
+                                                        </path>
+                                                    </g>
+                                                </svg>
+                                            </figure>
+
+                                            <figure class="absolute -right-5 -bottom-5 text-theme-orange">
+                                                <svg aria-hidden="true" focusable="false" role="img" class="w-10 h-10"
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                                    <g class="fa-group">
+                                                        <path fill="currentColor"
+                                                            d="M176 32H48A48 48 0 0 0 0 80v128a48 48 0 0 0 48 48h80v64a64.06 64.06 0 0 1-64 64h-8a23.94 23.94 0 0 0-24 23.88V456a23.94 23.94 0 0 0 23.88 24H64a160 160 0 0 0 160-160V80a48 48 0 0 0-48-48z"
+                                                            opacity="50%"></path>
+                                                        <path fill="currentColor"
+                                                            d="M464 32H336a48 48 0 0 0-48 48v128a48 48 0 0 0 48 48h80v64a64.06 64.06 0 0 1-64 64h-8a23.94 23.94 0 0 0-24 23.88V456a23.94 23.94 0 0 0 23.88 24H352a160 160 0 0 0 160-160V80a48 48 0 0 0-48-48z">
+                                                        </path>
+                                                    </g>
+                                                </svg>
+                                            </figure>
+
+                                            <!-- Card Content -->
+                                            <div class="card-body relative z-30 p-6">
+                                                <p class="font-medium">
+                                                    <span>"</span>
+                                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                    استفاده
+                                                    از
+                                                    طراحان گرافیک است...
+                                                </p>
+                                            </div>
+
+                                            <div class="card-actions px-6">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="inline-block w-6 h-6"
+                                                    viewBox="0 0 512 512">
+                                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="48" d="M400 256H112" />
+                                                </svg>
+                                                <span class="font-bold text-sm lg:text-base">
+                                                    رئیس صدا و سیما
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 01 -->
+                                <div class="swiper-slide">
+                                    <!-- Card Post -->
+                                    <div class="aspect-w-2 aspect-h-1 p-8">
+                                        <div class="testimonial-card relative h-full border p-6 rounded-box transition-all bg-white">
+
+                                            <!-- Card Image -->
+                                            <figure class="absolute -left-5 -top-5 text-theme-orange">
+                                                <svg aria-hidden="true" focusable="false" role="img" class="w-10 h-10"
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                                    <g>
+                                                        <path fill="currentColor"
+                                                            d="M464 256h-80v-64a64.06 64.06 0 0 1 64-64h8a23.94 23.94 0 0 0 24-23.88V56a23.94 23.94 0 0 0-23.88-24H448a160 160 0 0 0-160 160v240a48 48 0 0 0 48 48h128a48 48 0 0 0 48-48V304a48 48 0 0 0-48-48z"
+                                                            opacity="50%"></path>
+                                                        <path fill="currentColor"
+                                                            d="M176 256H96v-64a64.06 64.06 0 0 1 64-64h8a23.94 23.94 0 0 0 24-23.88V56a23.94 23.94 0 0 0-23.88-24H160A160 160 0 0 0 0 192v240a48 48 0 0 0 48 48h128a48 48 0 0 0 48-48V304a48 48 0 0 0-48-48z">
+                                                        </path>
+                                                    </g>
+                                                </svg>
+                                            </figure>
+
+                                            <figure class="absolute -right-5 -bottom-5 text-theme-orange">
+                                                <svg aria-hidden="true" focusable="false" role="img" class="w-10 h-10"
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                                    <g class="fa-group">
+                                                        <path fill="currentColor"
+                                                            d="M176 32H48A48 48 0 0 0 0 80v128a48 48 0 0 0 48 48h80v64a64.06 64.06 0 0 1-64 64h-8a23.94 23.94 0 0 0-24 23.88V456a23.94 23.94 0 0 0 23.88 24H64a160 160 0 0 0 160-160V80a48 48 0 0 0-48-48z"
+                                                            opacity="50%"></path>
+                                                        <path fill="currentColor"
+                                                            d="M464 32H336a48 48 0 0 0-48 48v128a48 48 0 0 0 48 48h80v64a64.06 64.06 0 0 1-64 64h-8a23.94 23.94 0 0 0-24 23.88V456a23.94 23.94 0 0 0 23.88 24H352a160 160 0 0 0 160-160V80a48 48 0 0 0-48-48z">
+                                                        </path>
+                                                    </g>
+                                                </svg>
+                                            </figure>
+
+                                            <!-- Card Content -->
+                                            <div class="card-body relative z-30 p-6">
+                                                <p class="font-medium">
+                                                    <span>"</span>
+                                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                    استفاده
+                                                    از
+                                                    طراحان گرافیک است...
+                                                </p>
+                                            </div>
+
+                                            <div class="card-actions px-6">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="inline-block w-6 h-6"
+                                                    viewBox="0 0 512 512">
+                                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="48" d="M400 256H112" />
+                                                </svg>
+                                                <span class="font-bold text-sm lg:text-base">
+                                                    رئیس صدا و سیما
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 01 -->
+                                <div class="swiper-slide">
+                                    <!-- Card Post -->
+                                    <div class="aspect-w-2 aspect-h-1 p-8">
+                                        <div class="testimonial-card relative h-full border p-6 rounded-box transition-all bg-white">
+
+                                            <!-- Card Image -->
+                                            <figure class="absolute -left-5 -top-5 text-theme-orange">
+                                                <svg aria-hidden="true" focusable="false" role="img" class="w-10 h-10"
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                                    <g>
+                                                        <path fill="currentColor"
+                                                            d="M464 256h-80v-64a64.06 64.06 0 0 1 64-64h8a23.94 23.94 0 0 0 24-23.88V56a23.94 23.94 0 0 0-23.88-24H448a160 160 0 0 0-160 160v240a48 48 0 0 0 48 48h128a48 48 0 0 0 48-48V304a48 48 0 0 0-48-48z"
+                                                            opacity="50%"></path>
+                                                        <path fill="currentColor"
+                                                            d="M176 256H96v-64a64.06 64.06 0 0 1 64-64h8a23.94 23.94 0 0 0 24-23.88V56a23.94 23.94 0 0 0-23.88-24H160A160 160 0 0 0 0 192v240a48 48 0 0 0 48 48h128a48 48 0 0 0 48-48V304a48 48 0 0 0-48-48z">
+                                                        </path>
+                                                    </g>
+                                                </svg>
+                                            </figure>
+
+                                            <figure class="absolute -right-5 -bottom-5 text-theme-orange">
+                                                <svg aria-hidden="true" focusable="false" role="img" class="w-10 h-10"
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                                    <g class="fa-group">
+                                                        <path fill="currentColor"
+                                                            d="M176 32H48A48 48 0 0 0 0 80v128a48 48 0 0 0 48 48h80v64a64.06 64.06 0 0 1-64 64h-8a23.94 23.94 0 0 0-24 23.88V456a23.94 23.94 0 0 0 23.88 24H64a160 160 0 0 0 160-160V80a48 48 0 0 0-48-48z"
+                                                            opacity="50%"></path>
+                                                        <path fill="currentColor"
+                                                            d="M464 32H336a48 48 0 0 0-48 48v128a48 48 0 0 0 48 48h80v64a64.06 64.06 0 0 1-64 64h-8a23.94 23.94 0 0 0-24 23.88V456a23.94 23.94 0 0 0 23.88 24H352a160 160 0 0 0 160-160V80a48 48 0 0 0-48-48z">
+                                                        </path>
+                                                    </g>
+                                                </svg>
+                                            </figure>
+
+                                            <!-- Card Content -->
+                                            <div class="card-body relative z-30 p-6">
+                                                <p class="font-medium">
+                                                    <span>"</span>
+                                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                    استفاده
+                                                    از
+                                                    طراحان گرافیک است...
+                                                </p>
+                                            </div>
+
+                                            <div class="card-actions px-6">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="inline-block w-6 h-6"
+                                                    viewBox="0 0 512 512">
+                                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="48" d="M400 256H112" />
+                                                </svg>
+                                                <span class="font-bold text-sm lg:text-base">
+                                                    رئیس صدا و سیما
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 01 -->
+                                <div class="swiper-slide">
+                                    <!-- Card Post -->
+                                    <div class="aspect-w-2 aspect-h-1 p-8">
+                                        <div class="testimonial-card relative h-full border p-6 rounded-box transition-all bg-white">
+
+                                            <!-- Card Image -->
+                                            <figure class="absolute -left-5 -top-5 text-theme-orange">
+                                                <svg aria-hidden="true" focusable="false" role="img" class="w-10 h-10"
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                                    <g>
+                                                        <path fill="currentColor"
+                                                            d="M464 256h-80v-64a64.06 64.06 0 0 1 64-64h8a23.94 23.94 0 0 0 24-23.88V56a23.94 23.94 0 0 0-23.88-24H448a160 160 0 0 0-160 160v240a48 48 0 0 0 48 48h128a48 48 0 0 0 48-48V304a48 48 0 0 0-48-48z"
+                                                            opacity="50%"></path>
+                                                        <path fill="currentColor"
+                                                            d="M176 256H96v-64a64.06 64.06 0 0 1 64-64h8a23.94 23.94 0 0 0 24-23.88V56a23.94 23.94 0 0 0-23.88-24H160A160 160 0 0 0 0 192v240a48 48 0 0 0 48 48h128a48 48 0 0 0 48-48V304a48 48 0 0 0-48-48z">
+                                                        </path>
+                                                    </g>
+                                                </svg>
+                                            </figure>
+
+                                            <figure class="absolute -right-5 -bottom-5 text-theme-orange">
+                                                <svg aria-hidden="true" focusable="false" role="img" class="w-10 h-10"
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                                    <g class="fa-group">
+                                                        <path fill="currentColor"
+                                                            d="M176 32H48A48 48 0 0 0 0 80v128a48 48 0 0 0 48 48h80v64a64.06 64.06 0 0 1-64 64h-8a23.94 23.94 0 0 0-24 23.88V456a23.94 23.94 0 0 0 23.88 24H64a160 160 0 0 0 160-160V80a48 48 0 0 0-48-48z"
+                                                            opacity="50%"></path>
+                                                        <path fill="currentColor"
+                                                            d="M464 32H336a48 48 0 0 0-48 48v128a48 48 0 0 0 48 48h80v64a64.06 64.06 0 0 1-64 64h-8a23.94 23.94 0 0 0-24 23.88V456a23.94 23.94 0 0 0 23.88 24H352a160 160 0 0 0 160-160V80a48 48 0 0 0-48-48z">
+                                                        </path>
+                                                    </g>
+                                                </svg>
+                                            </figure>
+
+                                            <!-- Card Content -->
+                                            <div class="card-body relative z-30 p-6">
+                                                <p class="font-medium">
+                                                    <span>"</span>
+                                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                                    استفاده
+                                                    از
+                                                    طراحان گرافیک است...
+                                                </p>
+                                            </div>
+
+                                            <div class="card-actions px-6">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="inline-block w-6 h-6"
+                                                    viewBox="0 0 512 512">
+                                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="48" d="M400 256H112" />
+                                                </svg>
+                                                <span class="font-bold text-sm lg:text-base">
+                                                    رئیس صدا و سیما
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- END: Blog Section -->
+
+            <!-- BEGIN: SMS Subscribe Section -->
+            <section id="sms-subscribe" class="py-10 lg:py-20 min-h-section">
+                <div class="container">
+                    <div class="border rounded-box p-4 lg:p-4">
+                        <div class="grid grid-cols-1 lg:grid-cols-3">
+                            <!-- Subscribe Side -->
+                            <div class="lg:col-span-2 px-2 lg:px-4 lg:border-l mb-4 lg:mb-0">
+                                <form action="" class="form-control lg:flex-row items-center justify-between">
+                                    <label class="label">
+                                        <span class="label-text">
+                                            اطلاع از آخرین‌های آریاراد
+                                        </span>
+                                    </label>
+                                    <div class="w-full lg:w-9/12 max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg relative">
+                                        <input type="email" name="email" id="email"
+                                            placeholder="شماره موبایل خود را وارد نمایید"
+                                            class="w-full pl-16 input input-ghost bg-base-200 rounded-full" required>
+                                        <button
+                                            class="absolute left-0 top-0 btn btn-ghost hover:bg-transparent rounded-full rounded-r-none text-xl">
+                                            +
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Social Icons Side -->
+                            <div class="lg:col-span-1 px-2 lg:px-4 flex flex-wrap items-center justify-around">
+                                <a href="#"
+                                    class="btn btn-square bg-social-telegram-bg hover:bg-social-telegram-bg text-social-telegram border-none m-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"
+                                        width="24" height="24">
+                                        <path
+                                            d="M53.12 199.94l400-151.39a8 8 0 0110.33 10.33l-151.39 400a8 8 0 01-15-.34l-67.4-166.09a16 16 0 00-10.11-10.11L53.46 215a8 8 0 01-.34-15.06zM460 52L227 285"
+                                            fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="32" />
+                                    </svg>
+                                </a>
+                                <a href="#"
+                                    class="btn btn-square bg-social-instagram-bg hover:bg-social-instagram-bg text-social-instagram border-none m-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"
+                                        width="24" height="24">
+                                        <path
+                                            d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z"
+                                            fill="currentColor" />
+                                        <path
+                                            d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </a>
+                                <a href="#"
+                                    class="btn btn-square bg-social-twitter-bg hover:bg-social-twitter-bg text-social-twitter border-none m-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"
+                                        width="24" height="24">
+                                        <path
+                                            d="M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </a>
+                                <a href="#"
+                                    class="btn btn-square bg-social-youtube-bg hover:bg-social-youtube-bg text-social-youtube border-none m-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"
+                                        width="24" height="24">
+                                        <path
+                                            d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149 1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5 58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5 2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9zM207 353.89v-196.5l145 98.2z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </a>
+                                <a href="#"
+                                    class="btn btn-square bg-yellow-100 hover:bg-yellow-100 text-yellow-500 border-none m-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"
+                                        width="24" height="24">
+                                        <path
+                                            d="M320 254.27c-4.5 51-40.12 80-80.55 80s-67.34-35.82-63.45-80 37.12-80 77.55-80 70.33 36 66.45 80z"
+                                            fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="32" />
+                                        <path
+                                            d="M319.77 415.77c-28.56 12-47.28 14.5-79.28 14.5-97.2 0-169-78.8-160.49-176s94.31-176 191.51-176C381 78.27 441.19 150 432.73 246c-6.31 71.67-52.11 92.32-76.09 88.07-22.56-4-41.18-24.42-37.74-63.5l8.48-96.25"
+                                            fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="32" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END: SMS Subscribe Section -->
+
         </main>
         <!-- END: Main -->
 
         <!-- BEGIN: Footer -->
-        <footer class="min-h-section lg:min-h-section-lg bg-theme">
+        <footer class="min-h-section lg:min-h-section-lg bg-theme-alt">
 
+            <!-- BEGIN: Top SVG Style -->
+            <div class="w-full text-theme-alt">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="3000"
+                    height="128" preserveAspectRatio="xMidYMid" viewBox="0 0 3000 128"
+                    style="z-index:1;margin-right:-2px;display:block;background-repeat:initial;background-color:rgb(255, 255, 255)">
+                    <g transform="translate(1500,64) scale(1,-1) translate(-1500,-64)"
+                        style="transform:matrix(1, 0, 0, -1, 0, 128)">
+                        <!-- <linearGradient id="lg-0.21788861306136043" x1="0" x2="1" y1="0" y2="0">
+                            <stop stop-color="#002f6c" offset="0"></stop>
+                            <stop stop-color="#002f6c" offset="1"></stop>
+                        </linearGradient> -->
+                        <path d="M 0 0 L 0 119.555 Q 500 136.099 1000 104.942 T 2000 74.1629 T 3000 54.1808 L 3000 0 Z"
+                            fill="currentColor" opacity="0.5"></path>
+                        <path d="M 0 0 L 0 72.9837 Q 500 111.909 1000 87.3432 T 2000 53.1136 T 3000 29.3568 L 3000 0 Z"
+                            fill="currentColor"></path>
+                    </g>
+                </svg>
+            </div>
+            <!-- END: Top SVG Style -->
+
+            <!-- BEGIN: Footer Content -->
+            <div class="container text-white py-8">
+
+                <!-- Row 1 / Company Short Information And Social And Certificates -->
+                <div class="grid grid-cols-1 lg:grid-cols-12">
+
+                    <!-- Company Short Information And Social -->
+                    <div class="lg:col-span-6 flex flex-col p-4 mb-4">
+                        <!-- Company Short Information -->
+                        <div class="flex flex-col mb-8">
+                            <figure class="mb-3">
+                                <img src="./assets/logo-white.1beabec6.png" alt=""
+                                    class="w-auto max-h-12 select-disabled bg-transparent" width="96" height="48">
+                            </figure>
+                            <h3 class="font-black text-base xl:text-xl mb-2">
+                                تخصص و تجربه ما، تضمین کار ماست.
+                            </h3>
+                            <p class="text-sm xl:text-base">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و
+                                برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی
+                                می‌باشد.
+                            </p>
+                        </div>
+
+                        <!-- Company Social -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start w-full">
+                            <a href="#" class="text-white mx-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" width="24"
+                                    height="24">
+                                    <path
+                                        d="M53.12 199.94l400-151.39a8 8 0 0110.33 10.33l-151.39 400a8 8 0 01-15-.34l-67.4-166.09a16 16 0 00-10.11-10.11L53.46 215a8 8 0 01-.34-15.06zM460 52L227 285"
+                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-white mx-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" width="24"
+                                    height="24">
+                                    <path
+                                        d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z"
+                                        fill="currentColor" />
+                                    <path
+                                        d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z"
+                                        fill="currentColor" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-white mx-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" width="24"
+                                    height="24">
+                                    <path
+                                        d="M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z"
+                                        fill="currentColor" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-white mx-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" width="24"
+                                    height="24">
+                                    <path
+                                        d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149 1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5 58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5 2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9zM207 353.89v-196.5l145 98.2z"
+                                        fill="currentColor" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-white mx-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" width="24"
+                                    height="24">
+                                    <path
+                                        d="M320 254.27c-4.5 51-40.12 80-80.55 80s-67.34-35.82-63.45-80 37.12-80 77.55-80 70.33 36 66.45 80z"
+                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                    <path
+                                        d="M319.77 415.77c-28.56 12-47.28 14.5-79.28 14.5-97.2 0-169-78.8-160.49-176s94.31-176 191.51-176C381 78.27 441.19 150 432.73 246c-6.31 71.67-52.11 92.32-76.09 88.07-22.56-4-41.18-24.42-37.74-63.5l8.48-96.25"
+                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="32" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Certificates -->
+                    <div class="lg:col-span-6 flex flex-col justify-center items-center p-4 mb-4">
+                        <h3 class="flex justify-between items-center w-max font-medium text-base xl:text-xl mb-4">
+                            <span class="mr-2">
+                                گواهینامه‌ها / افتخارات ما
+                            </span>
+                        </h3>
+                        <div class="w-full h-max rounded-boxz border border-opacity-10 p-4">
+                            <!-- Slider main container -->
+                            <div id="certificate-slider" class="swiper-container">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <a href="#" class="card border border-dashed rounded-lg p-2">
+                                            <figure class="aspect-w-5 aspect-h-4">
+                                                <img src="./assets/certificate.5ca48b75.jpg" alt="" class="object-cover"
+                                                    width="300" height="400">
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="card border border-dashed rounded-lg p-2">
+                                            <figure class="aspect-w-5 aspect-h-4">
+                                                <img src="./assets/certificate.5ca48b75.jpg" alt="" class="object-cover"
+                                                    width="300" height="400">
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="card border border-dashed rounded-lg p-2">
+                                            <figure class="aspect-w-5 aspect-h-4">
+                                                <img src="./assets/certificate.5ca48b75.jpg" alt="" class="object-cover"
+                                                    width="300" height="400">
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="card border border-dashed rounded-lg p-2">
+                                            <figure class="aspect-w-5 aspect-h-4">
+                                                <img src="./assets/certificate.5ca48b75.jpg" alt="" class="object-cover"
+                                                    width="300" height="400">
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="card border border-dashed rounded-lg p-2">
+                                            <figure class="aspect-w-5 aspect-h-4">
+                                                <img src="./assets/certificate.5ca48b75.jpg" alt="" class="object-cover"
+                                                    width="300" height="400">
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="card border border-dashed rounded-lg p-2">
+                                            <figure class="aspect-w-5 aspect-h-4">
+                                                <img src="./assets/certificate.5ca48b75.jpg" alt="" class="object-cover"
+                                                    width="300" height="400">
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="card border border-dashed rounded-lg p-2">
+                                            <figure class="aspect-w-5 aspect-h-4">
+                                                <img src="./assets/certificate.5ca48b75.jpg" alt="" class="object-cover"
+                                                    width="300" height="400">
+                                            </figure>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Row 2 / Widgets -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 py-4 border-t border-b border-opacity-10">
+                    <!-- Column 01 / Quick Links-->
+                    <div class="lg:col-span-3 p-4 mb-6">
+                        <h3 class="flex justify-between items-center w-max font-medium text-base xl:text-xl mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="w-8 h-8"
+                                viewBox="0 0 512 512">
+                                <path
+                                    d="M208 352h-64a96 96 0 010-192h64M304 160h64a96 96 0 010 192h-64M163.29 256h187.42"
+                                    fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="36" />
+                            </svg>
+                            <span class="mr-2">
+                                دسترسی سریع
+                            </span>
+                        </h3>
+                        <ul class="footer-nav text-sm xl:text-base space-y-2">
+                            <li>
+                                <a href="#">
+                                    خدمات
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    نمونه کارها
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    دستاوردها
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    بلاگ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    درباره ما
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    ارتباط با ما
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 02 / Quick Links-->
+                    <div class="lg:col-span-3 p-4 mb-6">
+                        <h3 class="flex justify-between items-center w-max font-medium text-base xl:text-xl mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="w-7 h-7"
+                                viewBox="0 0 512 512">
+                                <path
+                                    d='M262.29 192.31a64 64 0 1057.4 57.4 64.13 64.13 0 00-57.4-57.4zM416.39 256a154.34 154.34 0 01-1.53 20.79l45.21 35.46a10.81 10.81 0 012.45 13.75l-42.77 74a10.81 10.81 0 01-13.14 4.59l-44.9-18.08a16.11 16.11 0 00-15.17 1.75A164.48 164.48 0 01325 400.8a15.94 15.94 0 00-8.82 12.14l-6.73 47.89a11.08 11.08 0 01-10.68 9.17h-85.54a11.11 11.11 0 01-10.69-8.87l-6.72-47.82a16.07 16.07 0 00-9-12.22 155.3 155.3 0 01-21.46-12.57 16 16 0 00-15.11-1.71l-44.89 18.07a10.81 10.81 0 01-13.14-4.58l-42.77-74a10.8 10.8 0 012.45-13.75l38.21-30a16.05 16.05 0 006-14.08c-.36-4.17-.58-8.33-.58-12.5s.21-8.27.58-12.35a16 16 0 00-6.07-13.94l-38.19-30A10.81 10.81 0 0149.48 186l42.77-74a10.81 10.81 0 0113.14-4.59l44.9 18.08a16.11 16.11 0 0015.17-1.75A164.48 164.48 0 01187 111.2a15.94 15.94 0 008.82-12.14l6.73-47.89A11.08 11.08 0 01213.23 42h85.54a11.11 11.11 0 0110.69 8.87l6.72 47.82a16.07 16.07 0 009 12.22 155.3 155.3 0 0121.46 12.57 16 16 0 0015.11 1.71l44.89-18.07a10.81 10.81 0 0113.14 4.58l42.77 74a10.8 10.8 0 01-2.45 13.75l-38.21 30a16.05 16.05 0 00-6.05 14.08c.33 4.14.55 8.3.55 12.47z'
+                                    fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'
+                                    stroke-width='32' />
+                            </svg>
+                            <span class="mr-2">
+                                خدمات
+                            </span>
+                        </h3>
+                        <ul class="footer-nav text-sm xl:text-base space-y-2">
+                            <li>
+                                <a href="#">
+                                    خدمات
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    نمونه کارها
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    دستاوردها
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    بلاگ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    درباره ما
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    ارتباط با ما
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 03 / Contact Details -->
+                    <div class="lg:col-span-4 p-4 mb-6">
+                        <h3
+                            class="flex justify-between items-center w-max text-white font-medium text-base xl:text-xl mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="w-7 h-7"
+                                viewBox="0 0 512 512">
+                                <path
+                                    d="M256 48C141.13 48 48 141.13 48 256s93.13 208 208 208 208-93.13 208-208S370.87 48 256 48z"
+                                    fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+                                <path
+                                    d="M256 48c-58.07 0-112.67 93.13-112.67 208S197.93 464 256 464s112.67-93.13 112.67-208S314.07 48 256 48z"
+                                    fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+                                <path
+                                    d="M117.33 117.33c38.24 27.15 86.38 43.34 138.67 43.34s100.43-16.19 138.67-43.34M394.67 394.67c-38.24-27.15-86.38-43.34-138.67-43.34s-100.43 16.19-138.67 43.34"
+                                    fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="32" />
+                                <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"
+                                    d="M256 48v416M464 256H48" />
+                            </svg>
+                            <span class="mr-2">
+                                راه‌های ارتباطی
+                            </span>
+                        </h3>
+                        <ul class="text-sm xl:text-base space-y-3">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mx-1" width="16" height="16"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M391 480c-19.52 0-46.94-7.06-88-30-49.93-28-88.55-53.85-138.21-103.38C116.91 298.77 93.61 267.79 61 208.45c-36.84-67-30.56-102.12-23.54-117.13C45.82 73.38 58.16 62.65 74.11 52a176.3 176.3 0 0128.64-15.2c1-.43 1.93-.84 2.76-1.21 4.95-2.23 12.45-5.6 21.95-2 6.34 2.38 12 7.25 20.86 16 18.17 17.92 43 57.83 52.16 77.43 6.15 13.21 10.22 21.93 10.23 31.71 0 11.45-5.76 20.28-12.75 29.81-1.31 1.79-2.61 3.5-3.87 5.16-7.61 10-9.28 12.89-8.18 18.05 2.23 10.37 18.86 41.24 46.19 68.51s57.31 42.85 67.72 45.07c5.38 1.15 8.33-.59 18.65-8.47 1.48-1.13 3-2.3 4.59-3.47 10.66-7.93 19.08-13.54 30.26-13.54h.06c9.73 0 18.06 4.22 31.86 11.18 18 9.08 59.11 33.59 77.14 51.78 8.77 8.84 13.66 14.48 16.05 20.81 3.6 9.53.21 17-2 22-.37.83-.78 1.74-1.21 2.75a176.49 176.49 0 01-15.29 28.58c-10.63 15.9-21.4 28.21-39.38 36.58A67.42 67.42 0 01391 480z"
+                                        fill="currentColor" />
+                                </svg>
+                                <span>شماره تماس:</span>
+                                <a href="tel:02131564845" class="font-lato" dir="ltr">
+                                    +98-9120000000
+                                </a>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mx-1" width="16" height="16"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M320 254.27c-4.5 51-40.12 80-80.55 80s-67.34-35.82-63.45-80 37.12-80 77.55-80 70.33 36 66.45 80z"
+                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="40" />
+                                    <path
+                                        d="M319.77 415.77c-28.56 12-47.28 14.5-79.28 14.5-97.2 0-169-78.8-160.49-176s94.31-176 191.51-176C381 78.27 441.19 150 432.73 246c-6.31 71.67-52.11 92.32-76.09 88.07-22.56-4-41.18-24.42-37.74-63.5l8.48-96.25"
+                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="40" />
+                                </svg>
+                                <span>ایمیل:</span>
+                                <a href="mailto:ariaradra@gmail.com" class="font-lato" dir="ltr">
+                                    ariaradra@gmail.com
+                                </a>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mx-1" width="16" height="16"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M414.73 97.1A222.14 222.14 0 00256.94 32C134 32 33.92 131.58 33.87 254a220.61 220.61 0 0029.78 111L32 480l118.25-30.87a223.63 223.63 0 00106.6 27h.09c122.93 0 223-99.59 223.06-222A220.18 220.18 0 00414.73 97.1zM256.94 438.66h-.08a185.75 185.75 0 01-94.36-25.72l-6.77-4-70.17 18.32 18.73-68.09-4.41-7A183.46 183.46 0 0171.53 254c0-101.73 83.21-184.5 185.48-184.5a185 185 0 01185.33 184.64c-.04 101.74-83.21 184.52-185.4 184.52zm101.69-138.19c-5.57-2.78-33-16.2-38.08-18.05s-8.83-2.78-12.54 2.78-14.4 18-17.65 21.75-6.5 4.16-12.07 1.38-23.54-8.63-44.83-27.53c-16.57-14.71-27.75-32.87-31-38.42s-.35-8.56 2.44-11.32c2.51-2.49 5.57-6.48 8.36-9.72s3.72-5.56 5.57-9.26.93-6.94-.46-9.71-12.54-30.08-17.18-41.19c-4.53-10.82-9.12-9.35-12.54-9.52-3.25-.16-7-.2-10.69-.2a20.53 20.53 0 00-14.86 6.94c-5.11 5.56-19.51 19-19.51 46.28s20 53.68 22.76 57.38 39.3 59.73 95.21 83.76a323.11 323.11 0 0031.78 11.68c13.35 4.22 25.5 3.63 35.1 2.2 10.71-1.59 33-13.42 37.63-26.38s4.64-24.06 3.25-26.37-5.11-3.71-10.69-6.48z"
+                                        fill-rule="evenodd" fill="currentColor" />
+                                </svg>
+                                <span>شماره واتساپ:</span>
+                                <a href="tel:02131564845" class="font-lato" dir="ltr">
+                                    +98-9120000000
+                                </a>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mx-1" width="16" height="16"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M473 39.05a24 24 0 00-25.5-5.46L47.47 185h-.08a24 24 0 001 45.16l.41.13 137.3 58.63a16 16 0 0015.54-3.59L422 80a7.07 7.07 0 0110 10L226.66 310.26a16 16 0 00-3.59 15.54l58.65 137.38c.06.2.12.38.19.57 3.2 9.27 11.3 15.81 21.09 16.25h1a24.63 24.63 0 0023-15.46L478.39 64.62A24 24 0 00473 39.05z"
+                                        fill="currentColor" />
+                                </svg>
+                                <span>پشتیبانی تلگرام:</span>
+                                <a href="tg:resolve?domain=runiversity" class="font-lato" dir="ltr">
+                                    @ariaradco
+                                </a>
+                            </li>
+                            <li>
+                                <p class="w-max pl-6 pt-4 mt-4 border-t border-white border-opacity-20">
+                                    ساعات پاسخگویی: 9 صبح الی 9 شب
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 04 / ?-->
+                    <div class="lg:col-span-2 p-4 mb-6">
+                        <h3
+                            class="flex justify-between items-center w-max text-white font-medium text-base xl:text-xl mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="w-8 h-8"
+                                viewBox="0 0 512 512">
+                                <path
+                                    d="M208 352h-64a96 96 0 010-192h64M304 160h64a96 96 0 010 192h-64M163.29 256h187.42"
+                                    fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="36" />
+                            </svg>
+                            <span class="mr-2">
+                                اینستاگرام آریاراد
+                            </span>
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- Row 3 / Copyright -->
+                <div class="grid grid-cols-1 text-center py-6">
+
+                    <!-- Start Column -->
+                    <div class="flex justify-center items-center text-xs lg:text-sm">
+                        <p>
+                            تمامی حقوق مادی و معنوی این وبسایت متعلق به
+                            <a href="#">
+                                شرکت ارتفاع‌کاران آریاراد
+                            </a>
+                            می‌باشد.
+                        </p>
+                    </div>
+
+                    <!-- End Column -->
+                    <div class="flex justify-center items-center text-xs lg:text-sm">
+                        <p>
+                            &#60;
+                            طراحی و توسعه توسط
+                            <a href="#">
+                                رایاپیکسل
+                            </a>
+                            &#47;&#62;
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- END: Footer Content -->
         </footer>
         <!-- END: Footer -->
 
