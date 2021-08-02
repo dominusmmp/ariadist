@@ -40,13 +40,13 @@
     
     <!-- Delete This Line In Production Mode -->
     
-  <script type="module" crossorigin src="./assets/index.6945526e.js"></script>
-    <link rel="modulepreload" href="./assets/vendor.7cd78426.js">
-    <link rel="stylesheet" href="./assets/index.6c306dde.css">
+  <script type="module" crossorigin src="./assets/index.6a9418a8.js"></script>
+    <link rel="modulepreload" href="./assets/vendor.635b8fda.js">
+    <link rel="stylesheet" href="./assets/index.20d44222.css">
   </head>
 
 <body>
-    <div class="app" x-data="{mobileMenuOpen: false, toggleMenu() { this.mobileMenuOpen = ! this.mobileMenuOpen }}">
+    <div class="app" x-data="{mobileMenuOpen: false, toggleMenu() { this.mobileMenuOpen = ! this.mobileMenuOpen }, contactOpen: false, toggleContact() { this.contactOpen = ! this.contactOpen }}">
         <!-- BEGIN: Loader -->
         <!-- <div id="preloader"
             class="bg-theme-blue z-50 fixed top-0 bottom-0 left-0 right-0 w-screen h-screen overflow-hidden grid justify-center items-center select-none">
@@ -134,7 +134,7 @@
 
         <!-- BEGIN: Navbar -->
         <nav id="navbar-side"
-            class="navbar-side z-10 bg-white fixed lg:static top-0 right-0 left-0 flex items-center justify-between w-full min-h-mobile-nav lg:min-h-nav border-none mx-auto py-2 lg:py-0 px-2 lg:px-16 transition-all">
+            class="navbar-slide z-10 bg-white fixed lg:static top-0 right-0 left-0 flex items-center justify-between w-full min-h-mobile-nav lg:min-h-nav border-none mx-auto py-2 lg:py-0 px-2 lg:px-16 transition-all">
             <!-- BEGIN: Site Logo Mobile/Tablet -->
             <a href="#" class="lg:hidden mx-2">
                 <img src="./assets/logo.fc9836c8.png" alt="" width="96" height="48" loading="lazy" />
@@ -146,7 +146,8 @@
             <div class="order-first lg:hidden flex place-items-center">
                 <!-- Navigation Menu Open/Close Button -->
                 <button id="mobile-nav-btn"
-                    class="text-gray-800 btn p-0 mx-2 bg-transparent hover:bg-transparent border-none" data-toggle="0">
+                    class="text-gray-800 btn p-0 mx-2 bg-transparent hover:bg-transparent border-none"
+                    @click="toggleMenu()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
                         class="transform -rotate-90">
@@ -158,34 +159,31 @@
                 </button>
 
                 <!-- Mobile Top Call Button -->
-                <a href="tel:09120000000"
-                    class="text-gray-800 btn p-0 mx-2 bg-transparent hover:bg-transparent border-none">
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
-                        <path
-                            d="M391 480c-19.52 0-46.94-7.06-88-30-49.93-28-88.55-53.85-138.21-103.38C116.91 298.77 93.61 267.79 61 208.45c-36.84-67-30.56-102.12-23.54-117.13C45.82 73.38 58.16 62.65 74.11 52a176.3 176.3 0 0128.64-15.2c1-.43 1.93-.84 2.76-1.21 4.95-2.23 12.45-5.6 21.95-2 6.34 2.38 12 7.25 20.86 16 18.17 17.92 43 57.83 52.16 77.43 6.15 13.21 10.22 21.93 10.23 31.71 0 11.45-5.76 20.28-12.75 29.81-1.31 1.79-2.61 3.5-3.87 5.16-7.61 10-9.28 12.89-8.18 18.05 2.23 10.37 18.86 41.24 46.19 68.51s57.31 42.85 67.72 45.07c5.38 1.15 8.33-.59 18.65-8.47 1.48-1.13 3-2.3 4.59-3.47 10.66-7.93 19.08-13.54 30.26-13.54h.06c9.73 0 18.06 4.22 31.86 11.18 18 9.08 59.11 33.59 77.14 51.78 8.77 8.84 13.66 14.48 16.05 20.81 3.6 9.53.21 17-2 22-.37.83-.78 1.74-1.21 2.75a176.49 176.49 0 01-15.29 28.58c-10.63 15.9-21.4 28.21-39.38 36.58A67.42 67.42 0 01391 480z"
-                            stroke="currentColor" />
-                    </svg> -->
+                <button
+                    class="text-gray-800 btn p-0 mx-2 bg-transparent hover:bg-transparent border-none" @click="toggleContact()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
                         <path
                             d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z"
                             fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
                     </svg>
                     <span class="sr-only">Mobile Call Button</span>
-                </a>
+                </button>
             </div>
             <!-- END: Mobile Menu Button -->
 
             <!-- BEGIN: Mobile Menu Overlay -->
             <div id="mobile-menu-overlay"
-                class="z-20 fixed top-0 bottom-0 left-0 right-0 bg-black bg-opacity-50 w-full h-full cursor-pointer hidden">
+                class="z-20 fixed top-0 bottom-0 left-0 right-0 bg-black bg-opacity-50 w-full h-full cursor-pointer hidden"
+                @click="toggleMenu()" :class="mobileMenuOpen && 'show'">
             </div>
             <!-- END: Mobile Menu Overlay -->
 
             <div id="navbar-side-panel"
-                class="navbar-side-panel bg-white lg:bg-transparent text-gray-900 fixed top-0 bottom-0 left-0 z-30 w-80 lg:w-full max-w-screen lg:flex lg:items-center lg:justify-between lg:relative font-medium whitespace-nowrap hide lg:px-0 lg:py-0 lg:min-h-nav">
+                class="navbar-side-panel bg-white lg:bg-transparent text-gray-900 fixed top-0 bottom-0 left-0 z-30 w-80 lg:w-full max-w-screen lg:flex lg:items-center lg:justify-between lg:relative font-medium whitespace-nowrap hide lg:px-0 lg:py-0 lg:min-h-nav"
+                :class="mobileMenuOpen && 'show'">
 
                 <!-- BEGIN: Site Logo Desktop -->
-                <div class="hidden lg:inline-block ml-8 mr-2">
+                <div class="hidden lg:inline-block ml-8 mr-2 lg:ml-0 lg:mr-0">
                     <a href="#">
                         <img src="./assets/logo.fc9836c8.png" alt="" class="w-auto max-h-12" width="96" height="48"
                             loading="lazy" />
@@ -200,7 +198,7 @@
                     <!-- BEGIN: Mobile Side Menu Top Section: Header Row -->
                     <div class="flex justify-end items-center p-3">
                         <!-- BEGIN: Mobile Side Menu Close Button -->
-                        <a href="#" id="mobile-menu-back" class="inline-block focus:outline-none">
+                        <button id="mobile-menu-back" class="inline-block focus:outline-none" @click="toggleMenu()">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none"
                                 viewBox="0 0 512 512" class="inline-block stroke-current">
                                 <path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
@@ -208,7 +206,7 @@
                                     d="M244 400L100 256l144-144M120 256h292" />
                             </svg>
                             <span class="sr-only">Mobile Navigation Menu Button</span>
-                        </a>
+                        </button>
                         <!-- END: Mobile Side Menu Close Button -->
                     </div>
                     <!-- END: Mobile Side Menu Top Section: Header Row -->
@@ -326,20 +324,57 @@
             </div>
 
             <!-- BEGIN: Mobile Contact us Button -->
-            <a href="tel:09120000000" id="mobile-contactus-btn"
-                class="btn bg-theme hover:bg-theme-hover border-theme hover:border-theme-hover text-white w-full fixed bottom-0 left-0 right-0 hidden rounded-none">
-                <div class="text-sm">
-                    <span class="block">مشاوره رایگان (تغییر)</span>
-                    <span class="text-xs font-lato" dir="ltr">+98-9120000000</span>
+            <div id="mobile-contactus-btn" class="w-full max-w-screen fixed -bottom-36 left-0 right-0 z-10 p-4" :class="contactOpen && 'show'">
+
+                <!-- Contact BTN Container -->
+                <div class="grid grid-cols-3 gap-2 bg-white bg-opacity-50 rounded-box p-1">
+                    <!-- Call BTN -->
+                    <a href="tel:09120000000"
+                        class="flex flex-col place-items-center py-2 bg-theme-orange text-white text-center rounded-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="block mx-auto stroke-current mb-2" width="28"
+                            height="28" fill="none" viewBox="0 0 512 512">
+                            <path xmlns="http://www.w3.org/2000/svg"
+                                d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z"
+                                fill="currentColor" stroke="none" stroke-miterlimit="10" stroke-width="32" />
+                        </svg>
+                        <span class="text-xs block">
+                            مشاوره تلفنی
+                        </span>
+                        <span class="sr-only">Mobile Contact Us Button</span>
+                    </a>
+
+                    <!-- Whatsapp BTN -->
+                    <a href="https://wa.me/989120000000"
+                        class="flex flex-col place-items-center py-2 bg-theme-green text-white text-center rounded-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="block mx-auto stroke-current mb-2" width="28"
+                            height="28" fill="none" viewBox="0 0 512 512">
+                            <path
+                                d="M414.73 97.1A222.14 222.14 0 00256.94 32C134 32 33.92 131.58 33.87 254a220.61 220.61 0 0029.78 111L32 480l118.25-30.87a223.63 223.63 0 00106.6 27h.09c122.93 0 223-99.59 223.06-222A220.18 220.18 0 00414.73 97.1zM256.94 438.66h-.08a185.75 185.75 0 01-94.36-25.72l-6.77-4-70.17 18.32 18.73-68.09-4.41-7A183.46 183.46 0 0171.53 254c0-101.73 83.21-184.5 185.48-184.5a185 185 0 01185.33 184.64c-.04 101.74-83.21 184.52-185.4 184.52zm101.69-138.19c-5.57-2.78-33-16.2-38.08-18.05s-8.83-2.78-12.54 2.78-14.4 18-17.65 21.75-6.5 4.16-12.07 1.38-23.54-8.63-44.83-27.53c-16.57-14.71-27.75-32.87-31-38.42s-.35-8.56 2.44-11.32c2.51-2.49 5.57-6.48 8.36-9.72s3.72-5.56 5.57-9.26.93-6.94-.46-9.71-12.54-30.08-17.18-41.19c-4.53-10.82-9.12-9.35-12.54-9.52-3.25-.16-7-.2-10.69-.2a20.53 20.53 0 00-14.86 6.94c-5.11 5.56-19.51 19-19.51 46.28s20 53.68 22.76 57.38 39.3 59.73 95.21 83.76a323.11 323.11 0 0031.78 11.68c13.35 4.22 25.5 3.63 35.1 2.2 10.71-1.59 33-13.42 37.63-26.38s4.64-24.06 3.25-26.37-5.11-3.71-10.69-6.48z"
+                                fill-rule="evenodd" fill="currentColor" />
+                        </svg>
+                        <span class="text-xs block">
+                            پشتیبان واتس‌اپ
+                        </span>
+                        <span class="sr-only">Mobile Contact Us Button</span>
+                    </a>
+
+                    <!-- Telegram BTN -->
+                    <a href="tg://resolve?domain=ariaradco"
+                        class="flex flex-col place-items-center py-2 bg-social-telegram text-white text-center rounded-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="block mx-auto stroke-current mb-2" width="28"
+                            height="28" fill="none" viewBox="0 0 512 512">
+                            <path
+                                d="M473 39.05a24 24 0 00-25.5-5.46L47.47 185h-.08a24 24 0 001 45.16l.41.13 137.3 58.63a16 16 0 0015.54-3.59L422 80a7.07 7.07 0 0110 10L226.66 310.26a16 16 0 00-3.59 15.54l58.65 137.38c.06.2.12.38.19.57 3.2 9.27 11.3 15.81 21.09 16.25h1a24.63 24.63 0 0023-15.46L478.39 64.62A24 24 0 00473 39.05z"
+                                fill="currentColor" />
+                        </svg>
+                        <span class="text-xs block">
+                            پشتیبان تلگرام
+                        </span>
+                        <span class="sr-only">Mobile Contact Us Button</span>
+                    </a>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 512 512"
-                    class="inline-block mr-2 stroke-current">
-                    <path xmlns="http://www.w3.org/2000/svg"
-                        d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z"
-                        fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
-                </svg>
-                <span class="sr-only">Mobile Contact Us Button</span>
-            </a>
+
+            </div>
             <!-- END: Mobile Contact us Button -->
         </nav>
         <!-- END: Navbar -->
@@ -365,20 +400,20 @@
                                     <!-- Customize Position By Changing Class "justify-self-start, justify-self-center, justify-self-end" -->
                                     <!-- Customize Text Direction By Changing Class "text-right, text-center, text-left" -->
                                     <div
-                                        class="hero-content justify-self-start text-right mx-2 xs:mx-4 sm:mx-8 md:mx-12 lg:mx-24 text-neutral-content">
+                                        class="hero-content justify-self-center text-center mx-2 xs:mx-4 sm:mx-8 md:mx-12 lg:mx-24 text-neutral-content">
                                         <div class="max-w-2xl">
                                             <h1
                                                 class="mb-4 text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
                                                 تخصص و تجربه ما،
                                                 <br class="hidden lg:inline" />
-                                                تضمین کار ماست
+                                                تضمین کار ماست 1
                                             </h1>
                                             <p class="mb-8 text-xs xs:text-sm sm:text-base lg:text-lg">
                                                 لورم ایپسوم متن ساختگی با تولید سادگی جهت استفاده
                                                 از طراحان گرافیک است.
                                             </p>
                                             <a href="#"
-                                                class="btn btn-md bg-theme hover:bg-theme-hover border-theme hover:border-theme-hover relative">
+                                                class="btn btn-md bg-theme-btn hover:bg-theme-btn-hover border-theme-btn hover:border-theme-btn-hover relative">
                                                 از اینجا شروع کنید
                                             </a>
                                         </div>
@@ -404,14 +439,14 @@
                                                 class="mb-4 text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
                                                 تخصص و تجربه ما،
                                                 <br class="hidden lg:inline" />
-                                                تضمین کار ماست
+                                                تضمین کار ماست 2
                                             </h1>
                                             <p class="mb-8 text-xs xs:text-sm sm:text-base lg:text-lg">
                                                 لورم ایپسوم متن ساختگی با تولید سادگی جهت استفاده
                                                 از طراحان گرافیک است.
                                             </p>
                                             <a href="#"
-                                                class="btn btn-md bg-theme-green hover:bg-theme-green-hover border-theme-green hover:border-theme-green-hover relative">
+                                                class="btn btn-md bg-theme-btn hover:bg-theme-btn-hover border-theme-btn hover:border-theme-btn-hover relative">
                                                 از اینجا شروع کنید
                                             </a>
                                         </div>
@@ -431,20 +466,20 @@
                                     <!-- Customize Position By Changing Class "justify-self-start, justify-self-center, justify-self-end" -->
                                     <!-- Customize Text Direction By Changing Class "text-right, text-center, text-left" -->
                                     <div
-                                        class="hero-content justify-self-end text-left mx-2 xs:mx-4 sm:mx-8 md:mx-12 lg:mx-24 text-neutral-content">
+                                        class="hero-content justify-self-center text-center mx-2 xs:mx-4 sm:mx-8 md:mx-12 lg:mx-24 text-neutral-content">
                                         <div class="max-w-2xl">
                                             <h1
                                                 class="mb-4 text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
                                                 تخصص و تجربه ما،
                                                 <br class="hidden lg:inline" />
-                                                تضمین کار ماست
+                                                تضمین کار ماست 3
                                             </h1>
                                             <p class="mb-8 text-xs xs:text-sm sm:text-base lg:text-lg">
                                                 لورم ایپسوم متن ساختگی با تولید سادگی جهت استفاده
                                                 از طراحان گرافیک است.
                                             </p>
                                             <a href="#"
-                                                class="btn btn-md bg-theme-orange hover:bg-theme-orange-hover border-theme-orange hover:border-theme-orange-hover relative">
+                                                class="btn btn-md bg-theme-btn hover:bg-theme-btn-hover border-theme-btn hover:border-theme-btn-hover relative">
                                                 از اینجا شروع کنید
                                             </a>
                                         </div>
@@ -470,14 +505,14 @@
                                                 class="mb-4 text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
                                                 تخصص و تجربه ما،
                                                 <br class="hidden lg:inline" />
-                                                تضمین کار ماست
+                                                تضمین کار ماست 4
                                             </h1>
                                             <p class="mb-8 text-xs xs:text-sm sm:text-base lg:text-lg">
                                                 لورم ایپسوم متن ساختگی با تولید سادگی جهت استفاده
                                                 از طراحان گرافیک است.
                                             </p>
-                                            <a href=""
-                                                class="btn btn-md bg-theme hover:bg-theme-hover border-theme hover:border-theme-hover relative">
+                                            <a href="#"
+                                                class="btn btn-md bg-theme-btn hover:bg-theme-btn-hover border-theme-btn hover:border-theme-btn-hover relative">
                                                 از اینجا شروع کنید
                                             </a>
                                         </div>
@@ -517,7 +552,7 @@
                     </div>
 
                     <!-- Section Content / Services Items -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-10">
                         <!-- Service Item 00 -->
                         <div class="card progress-card rounded-box">
 
@@ -531,58 +566,7 @@
                             </figure>
 
                             <!-- Card Content -->
-                            <div class="card-body relative z-30 p-0 px-6">
-                                <div class="card-content relative rounded-box rounded-t-none bg-gray-50 -mt-10 p-4">
-                                    <!-- Card Top Progress Element, Don't Touch It -->
-                                    <div
-                                        class="card-progress w-0 bg-opacity-0 h-1 bg-info absolute top-0 left-0 transition-all duration-500 ease-in-out">
-                                    </div>
-                                    <!-- Card Top Progress Element, Don't Touch It / -->
-
-                                    <h2 class="card-title 2xl:text-2xl">
-                                        <a href="#" class="hover:text-theme transition-colors duration-200">
-                                            سازمان ارتباطات
-                                        </a>
-                                    </h2>
-
-                                    <p>
-                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                        استفاده
-                                        از
-                                        طراحان گرافیک است.
-                                    </p>
-
-                                    <div class="card-actions items-center justify-end">
-                                        <a href="#"
-                                            class="border-b border-transparent hover:border-black transition-colors duration-200">
-                                            اطلاعات بیشتر
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                class="w-4 h-4 inline-block" viewBox="0 0 512 512">
-                                                <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="48"
-                                                    d="M328 112L184 256l144 144" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Service Item 00 -->
-                        <div class="card progress-card rounded-box">
-
-                            <!-- Card Image -->
-                            <figure>
-                                <a href="#" class="block overflow-hidden rounded-box aspect-w-5 aspect-h-4">
-                                    <img src="./assets/cardbg03.6e953729.jpg"
-                                        class="w-full h-full object-cover transition-all duration-500" width="600"
-                                        height="600" alt="Test Image" loading="lazy" />
-                                </a>
-                            </figure>
-
-                            <!-- Card Content -->
-                            <div class="card-body relative z-30 p-0 px-6">
+                            <div class="card-body relative z-1 p-0 px-6">
                                 <div class="card-content relative rounded-box bg-gray-50 -mt-10 p-4">
                                     <!-- Card Top Progress Element, Don't Touch It -->
                                     <div
@@ -621,11 +605,11 @@
                         </div>
 
                         <!-- Service Item 00 -->
-                        <div class="card progress-card rounded-none">
+                        <div class="card progress-card rounded-box">
 
                             <!-- Card Image -->
                             <figure>
-                                <a href="#" class="block overflow-hidden aspect-w-5 aspect-h-4">
+                                <a href="#" class="block overflow-hidden rounded-box aspect-w-5 aspect-h-4">
                                     <img src="./assets/cardbg03.6e953729.jpg"
                                         class="w-full h-full object-cover transition-all duration-500" width="600"
                                         height="600" alt="Test Image" loading="lazy" />
@@ -633,8 +617,8 @@
                             </figure>
 
                             <!-- Card Content -->
-                            <div class="card-body relative z-30 p-0 px-8">
-                                <div class="card-content relative bg-gray-50 -mt-10 p-8">
+                            <div class="card-body relative z-1 p-0 px-6">
+                                <div class="card-content relative rounded-box bg-gray-50 -mt-10 p-4">
                                     <!-- Card Top Progress Element, Don't Touch It -->
                                     <div
                                         class="card-progress w-0 bg-opacity-0 h-1 bg-info absolute top-0 left-0 transition-all duration-500 ease-in-out">
@@ -655,6 +639,51 @@
                                     </p>
 
                                     <div class="card-actions items-center justify-end">
+                                        <a href="#"
+                                            class="border-b border-transparent hover:border-black transition-colors duration-200">
+                                            اطلاعات بیشتر
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                class="w-4 h-4 inline-block" viewBox="0 0 512 512">
+                                                <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="48"
+                                                    d="M328 112L184 256l144 144" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Service Item 00 -->
+                        <div class="grid grid-cols-12 lg:grid-cols-1 progress-card rounded-lg lg:rounded-box">
+
+                            <!-- Card Image -->
+                            <figure class="col-span-4 lg:col-span-1 h-full lg:h-auto">
+                                <a href="#" class="block h-full lg:h-auto overflow-hidden rounded-r-lg lg:rounded-box aspect-w-5 aspect-h-4">
+                                    <img src="./assets/cardbg03.6e953729.jpg"
+                                        class="w-full h-full object-cover transition-all duration-500" width="600"
+                                        height="600" alt="Test Image" loading="lazy" />
+                                </a>
+                            </figure>
+
+                            <!-- Card Content -->
+                            <div class="col-span-8 lg:col-span-1 card-body relative z-1 p-0 lg:px-6">
+                                <div class="card-content relative rounded-l-lg lg:rounded-box bg-gray-50 lg:-mt-10 p-4">
+                                    <h2 class="card-title 2xl:text-2xl">
+                                        <a href="#" class="hover:text-theme transition-colors duration-200">
+                                            سازمان ارتباطات
+                                        </a>
+                                    </h2>
+
+                                    <p class="hidden md:block">
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                        استفاده
+                                        از
+                                        طراحان گرافیک است.
+                                    </p>
+
+                                    <div class="card-actions items-center justify-start lg:justify-end">
                                         <a href="#"
                                             class="border-b border-transparent hover:border-black transition-colors duration-200">
                                             اطلاعات بیشتر
@@ -807,99 +836,6 @@
                             </div>
                         </a>
 
-                        <!-- Service Item 07 -->
-                        <div class="card border hover:bg-gray-200 transition-colors select-none">
-                            <div class="card-body">
-                                <img src="./assets/building.cf187093.svg" alt="" width="112" height="112"
-                                    class="mb-4 mx-auto" loading="lazy" />
-                                <h2 class="font-bold text-xl lg:text-2xl 2xl:text-3xl text-center mb-3">
-                                    شستشوی نما
-                                </h2>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-                                    گرافیک است.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Service Item 08 -->
-                        <div class="card border hover:bg-gray-200 transition-colors select-none">
-                            <div class="card-body">
-                                <img src="./assets/building.cf187093.svg" alt="" width="112" height="112"
-                                    class="mb-4 mx-auto" loading="lazy" />
-                                <h2 class="card-title text-xl lg:text-2xl 2xl:text-3xl text-center">
-                                    شستشوی نما
-                                </h2>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-                                    گرافیک است.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Service Item 09 -->
-                        <div class="card border hover:bg-gray-200 transition-colors select-none">
-                            <div class="card-body">
-                                <img src="./assets/building.cf187093.svg" alt="" width="112" height="112"
-                                    class="mb-4 mx-auto" loading="lazy" />
-                                <h2 class="card-title text-xl lg:text-2xl 2xl:text-3xl text-center">
-                                    شستشوی نما
-                                </h2>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-                                    گرافیک است.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Service Item 10 -->
-                        <div class="hero rounded-box overflow-hidden select-none">
-                            <img src="./assets/cardbg02.82226f53.jpg" class="w-full h-full object-cover" width="640"
-                                height="480" alt="" loading="lazy" />
-                            <div
-                                class="hero-content flex-col w-full h-full text-white bg-black bg-opacity-80 hover:bg-opacity-70 transition-all">
-                                <h2 class="font-semibold text-xl lg:text-2xl 2xl:text-3xl text-center mb-3">
-                                    نصب تابلو و بنر
-                                </h2>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-                                    گرافیک است.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Service Item 11 -->
-                        <div class="hero rounded-box overflow-hidden select-none">
-                            <img src="./assets/cardbg02.82226f53.jpg" class="w-full h-full object-cover" width="640"
-                                height="480" alt="" loading="lazy" />
-                            <div
-                                class="hero-content flex-col w-full h-full text-white bg-black bg-opacity-80 hover:bg-opacity-70 transition-all">
-                                <h2 class="font-semibold text-xl lg:text-2xl 2xl:text-3xl text-center mb-3">
-                                    نصب تابلو و بنر
-                                </h2>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-                                    گرافیک است.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Service Item 12 -->
-                        <div class="hero rounded-box overflow-hidden select-none">
-                            <img src="./assets/cardbg02.82226f53.jpg" class="w-full h-full object-cover" width="640"
-                                height="480" alt="" loading="lazy" />
-                            <div
-                                class="hero-content flex-col w-full h-full text-white bg-black bg-opacity-80 hover:bg-opacity-70 transition-all">
-                                <h2 class="font-semibold text-xl lg:text-2xl 2xl:text-3xl text-center mb-3">
-                                    نصب تابلو و بنر
-                                </h2>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-                                    گرافیک است.
-                                </p>
-                            </div>
-                        </div>
-
                     </div>
 
                 </div>
@@ -908,60 +844,17 @@
 
 
             <!-- BEGIN: Corp Video Section -->
-            <section id="corpvideo" class="hero min-h-section lg:min-h-section-lg bg-rope bg-theme-green">
-                <div class="w-full h-full">
-                    <div class="hero-conten w-full h-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-0">
-
-                        <!-- Section Title And Content -->
-                        <div class="w-full h-full min-h-section lg:min-h-section-lg mb-8 lg:mb-0">
-                            <div class="w-full h-full grid place-items-center text-white p-8 lg:p-20 xl:p-28 2xl:p-32">
-                                <div class="flex flex-col justify-center items-center">
-                                    <!-- Section Title -->
-                                    <h2
-                                        class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-bold lg:self-start mb-4">
-                                        چرا باید ما را انتخاب کنید؟
-                                    </h2>
-
-                                    <!-- Section text -->
-                                    <p class="text-sm lg:text-base mb-8">
-                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-                                        گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و
-                                        برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
-                                        کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
-                                        جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه
-                                        ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می
-                                        توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به
-                                        پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته
-                                        اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-                                    </p>
-                                    <a href="#"
-                                        class="btn btn-wide bg-theme-orange border-theme-orange hover:bg-theme-orange-hover hover:border-theme-orange-hover rounded-full">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            class="w-5 h-5 inline-block ml-2" viewBox="0 0 512 512">
-                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="64" d="M416 128L192 384l-96-96" />
-                                        </svg>
-                                        درباره ما بیشتر بدانید
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Section Video -->
-                        <div class="w-full h-full min-h-section lg:min-h-section-lg">
-                            <div class="w-full h-full grid place-items-center gap-0">
-                                <!-- <img src="./assets/img/vidbg01.jpg" width="192" height="83" class="object-cover w-full h-full min-h-full" alt="" loading="lazy" /> -->
-                                <video id="my-video" class="video-js object-cover w-full h-full" controls preload="none"
-                                    poster="./assets/vidbg01.64ddd6e2.jpg" data-setup="{}">
-                                    <source src="./assets/vid01.eb6a23c9.mp4" type="video/mp4" />
-                                    <p class="vjs-no-js">
-                                        To view this video please enable JavaScript, and consider upgrading to a
-                                        web browser that
-                                        <a href="./assets/img/vid01.mp4" target="_blank">supports HTML5
-                                            video</a>
-                                    </p>
-                                </video>
-                            </div>
+            <section id="corpvideo" class="py-10 lg:py-20 min-h-section lg:min-h-section-lg">
+                <div class="container">
+                    <div
+                        class="border-base-300 hover:border-black focus-within:border-black border-2 border-dashed rounded-lg lg:rounded-3xl p-1 md:p-2 lg:p-3 2xl:p-4 transition-colors duration-300">
+                        <div
+                            class="grid grid-cols-1 grid-rows-1 place-items-center max-h-max rounded-lg lg:rounded-3xl overflow-hidden relative">
+                            <video id="main-corp-vid" preload="none" playsinline controls
+                                poster="./assets/vidbg01.64ddd6e2.jpg" data-poster="./assets/img/vidbg01.jpg" class="w-full"
+                                data-plyr-config='{ "title": "Example Title" }'>
+                                <source src="./assets/vid01.eb6a23c9.mp4" type="video/mp4" />
+                            </video>
                         </div>
                     </div>
                 </div>
@@ -998,7 +891,7 @@
 
                                         <!-- Card Image -->
                                         <figure class="row-start-1 col-start-1 aspect-w-3 aspect-h-4 z-0">
-                                            <img src="https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg"
+                                            <img src="./assets/team1.c88d5018.jpg"
                                                 class="object-cover object-center filter grayscale transition-all duration-700"
                                                 width="300" height="400" alt="Test Image" loading="lazy" />
                                         </figure>
@@ -1026,7 +919,7 @@
 
                                         <!-- Card Image -->
                                         <figure class="row-start-1 col-start-1 aspect-w-3 aspect-h-4 z-0">
-                                            <img src="https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg"
+                                            <img src="./assets/team2.382c9f6b.jpg"
                                                 class="object-cover object-center filter grayscale transition-all duration-700"
                                                 width="300" height="400" alt="Test Image" loading="lazy" />
                                         </figure>
@@ -1051,7 +944,7 @@
 
                                         <!-- Card Image -->
                                         <figure class="row-start-1 col-start-1 aspect-w-3 aspect-h-4 z-0">
-                                            <img src="https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg"
+                                            <img src="./assets/team3.d75f7b46.jpg"
                                                 class="object-cover object-center filter grayscale transition-all duration-700"
                                                 width="300" height="400" alt="Test Image" loading="lazy" />
                                         </figure>
@@ -1081,23 +974,17 @@
                 <div class="container">
 
                     <!-- Section Title -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 mb-10 text-white">
-                        <div class="flex items-center justify-center lg:justify-start">
-                            <h2 class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-bold">
-                                مشتریانی که به ما اعتماد کرده‌اند
-                            </h2>
-                        </div>
-                        <div class="hidden lg:flex items-center justify-center lg:justify-end">
-                            <a href="#" class="text-base xl:text-lg">
-                                همه مشتریان
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    class="w-5 h-5 inline-block" viewBox="0 0 512 512">
-                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="48"
-                                        d="M244 400L100 256l144-144M120 256h292" />
-                                </svg>
-                            </a>
-                        </div>
+                    <div class="w-max max-w-full mb-8 text-center mx-auto text-white">
+                        <h2 class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-bold mb-4">
+                            مشتریانی که به ما اعتماد کرده‌اند
+                        </h2>
+                        <p class="text-sm lg:text-base mb-4">
+                            شرکت آریاراد در تلاش است تا خدمات خود را با بهترین کیفیت ارائه دهد.
+                        </p>
+                        <a href="#"
+                            class="btn btn-sm bg-theme-btn hover:bg-theme-btn-hover border-theme-btn hover:border-theme-btn-hover rounded-full">
+                            مشاهده سایر مشتریان
+                        </a>
                     </div>
 
                     <!-- Section Content -->
@@ -1258,12 +1145,13 @@
             <!-- END: Works Section -->
 
             <!-- BEGIN: FAQ -->
-            <section id="faq" class="mt-40 py-10 lg:py-20 min-h-section lg:min-h-section-lg">
+            <section id="faq" class="py-10 lg:py-20 min-h-section lg:min-h-section-lg mt-40">
                 <div class="container">
                     <div class="p-6 lg:p-16 bg-gray-50 rounded-box">
+
                         <!-- Section Title -->
-                        <div class="flex justify-center items-center mb-4">
-                            <h2 class="text-xl lg:text-2xl font-bold text-center">
+                        <div class="w-max max-w-full mb-8 text-center mx-auto">
+                            <h2 class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-bold mb-4">
                                 سوالات متداول
                             </h2>
                         </div>
@@ -1435,23 +1323,14 @@
                 <div class="container">
 
                     <!-- Section Title -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 mb-4">
-                        <div class="flex items-center justify-center lg:justify-start">
-                            <h2 class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-bold">
-                                آخرین مقالات
-                            </h2>
-                        </div>
-                        <div class="hidden lg:flex items-center justify-center lg:justify-end">
-                            <a href="#" class="link-neutral text-base xl:text-lg">
-                                همه مقالات
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    class="w-5 h-5 inline-block" viewBox="0 0 512 512">
-                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="48"
-                                        d="M244 400L100 256l144-144M120 256h292" />
-                                </svg>
-                            </a>
-                        </div>
+                    <div class="w-max max-w-full mb-8 text-center mx-auto ">
+                        <h2 class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-bold mb-4">
+                            آخرین مقالات
+                        </h2>
+                        <a href="#"
+                            class="btn btn-sm bg-theme-btn hover:bg-theme-btn-hover border-theme-btn hover:border-theme-btn-hover rounded-full">
+                            مشاهده همه مقالات
+                        </a>
                     </div>
 
                     <!-- Section Content -->
@@ -1791,57 +1670,6 @@
             </section>
             <!-- END: Blog Section -->
 
-            <!-- BEGIN: Instagram Section -->
-            <section id="instagram-feeds"
-                class="py-10 lg:py-20 min-h-section lg:min-h-section-lg bg-rope bg-theme-green">
-                <div class="container">
-                    <!-- Section Title -->
-                    <div class="w-max max-w-full mb-8 text-center text-white mx-auto">
-                        <h2 class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-bold mb-4">
-                            ما را در شبکه‌های اجتماعی دنبال کنید
-                        </h2>
-                        <p class="text-sm lg:text-base mb-4">
-                            آخرین پروژه‌ها و آموزش‌های ما را در اینستاگرام ما دنبال کنید.
-                        </p>
-                        <a href="#"
-                            class="btn btn-sm btn-outline text-white hover:bg-theme-orange hover:border-theme-orange-hover rounded-full">
-                            ورود به پیج اینستاگرام آریاراد
-                        </a>
-                    </div>
-
-                    <!-- Section Content -->
-                    <div class="w-full">
-                        <div class="max-w-md mx-auto">
-                            <div
-                                class="bg-gray-300 border text-white select-none p-3 flex justify-between items-center">
-                                <button
-                                    class="btn btn-sm btn-ghost hover:bg-transparent text-black font-lato">Follow</button>
-                                <div class="flex items-center">
-                                    <span
-                                        class="font-lato ml-2 text-lg font-bold text-black filter blur-sm animate-pulse">Username</span>
-                                    <div class="w-10 h-10 bg-white border rounded-full animate-pulse">.</div>
-                                </div>
-                            </div>
-                            <div class="aspect-w-1 aspect-h-1">
-                                <div class="grid grid-cols-3 bg-gray-300">
-                                    <div class="bg-white border text-white select-none animate-pulse">.</div>
-                                    <div class="bg-white border text-white select-none animate-pulse">.</div>
-                                    <div class="bg-white border text-white select-none animate-pulse">.</div>
-                                    <div class="bg-white border text-white select-none animate-pulse">.</div>
-                                    <div class="bg-white border text-white select-none animate-pulse">.</div>
-                                    <div class="bg-white border text-white select-none animate-pulse">.</div>
-                                    <div class="bg-white border text-white select-none animate-pulse">.</div>
-                                    <div class="bg-white border text-white select-none animate-pulse">.</div>
-                                    <div class="bg-white border text-white select-none animate-pulse">.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-            <!-- END: Instagram Section -->
-
             <!-- BEGIN: Blog Section -->
             <section id="testimonial-posts" class="py-10 lg:py-20 min-h-section lg:min-h-section-lg">
                 <div class="container">
@@ -1865,12 +1693,14 @@
                                 <div class="swiper-slide">
                                     <!-- Card Post -->
                                     <div class="aspect-w-2 aspect-h-1 p-8">
-                                        <div class="testimonial-card relative h-full border p-6 rounded-box transition-all bg-white">
+                                        <div
+                                            class="testimonial-card relative h-full border p-6 rounded-box transition-all bg-white">
 
                                             <!-- Card Image -->
                                             <figure class="absolute -left-5 -top-5 text-theme-orange">
                                                 <svg aria-hidden="true" focusable="false" role="img" class="w-10 h-10"
-                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 512 512">
                                                     <g>
                                                         <path fill="currentColor"
                                                             d="M464 256h-80v-64a64.06 64.06 0 0 1 64-64h8a23.94 23.94 0 0 0 24-23.88V56a23.94 23.94 0 0 0-23.88-24H448a160 160 0 0 0-160 160v240a48 48 0 0 0 48 48h128a48 48 0 0 0 48-48V304a48 48 0 0 0-48-48z"
@@ -1884,7 +1714,8 @@
 
                                             <figure class="absolute -right-5 -bottom-5 text-theme-orange">
                                                 <svg aria-hidden="true" focusable="false" role="img" class="w-10 h-10"
-                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 512 512">
                                                     <g class="fa-group">
                                                         <path fill="currentColor"
                                                             d="M176 32H48A48 48 0 0 0 0 80v128a48 48 0 0 0 48 48h80v64a64.06 64.06 0 0 1-64 64h-8a23.94 23.94 0 0 0-24 23.88V456a23.94 23.94 0 0 0 23.88 24H64a160 160 0 0 0 160-160V80a48 48 0 0 0-48-48z"
@@ -1908,8 +1739,8 @@
                                             </div>
 
                                             <div class="card-actions px-6">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="inline-block w-6 h-6"
-                                                    viewBox="0 0 512 512">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    class="inline-block w-6 h-6" viewBox="0 0 512 512">
                                                     <path fill="none" stroke="currentColor" stroke-linecap="round"
                                                         stroke-linejoin="round" stroke-width="48" d="M400 256H112" />
                                                 </svg>
@@ -1925,12 +1756,14 @@
                                 <div class="swiper-slide">
                                     <!-- Card Post -->
                                     <div class="aspect-w-2 aspect-h-1 p-8">
-                                        <div class="testimonial-card relative h-full border p-6 rounded-box transition-all bg-white">
+                                        <div
+                                            class="testimonial-card relative h-full border p-6 rounded-box transition-all bg-white">
 
                                             <!-- Card Image -->
                                             <figure class="absolute -left-5 -top-5 text-theme-orange">
                                                 <svg aria-hidden="true" focusable="false" role="img" class="w-10 h-10"
-                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 512 512">
                                                     <g>
                                                         <path fill="currentColor"
                                                             d="M464 256h-80v-64a64.06 64.06 0 0 1 64-64h8a23.94 23.94 0 0 0 24-23.88V56a23.94 23.94 0 0 0-23.88-24H448a160 160 0 0 0-160 160v240a48 48 0 0 0 48 48h128a48 48 0 0 0 48-48V304a48 48 0 0 0-48-48z"
@@ -1944,7 +1777,8 @@
 
                                             <figure class="absolute -right-5 -bottom-5 text-theme-orange">
                                                 <svg aria-hidden="true" focusable="false" role="img" class="w-10 h-10"
-                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 512 512">
                                                     <g class="fa-group">
                                                         <path fill="currentColor"
                                                             d="M176 32H48A48 48 0 0 0 0 80v128a48 48 0 0 0 48 48h80v64a64.06 64.06 0 0 1-64 64h-8a23.94 23.94 0 0 0-24 23.88V456a23.94 23.94 0 0 0 23.88 24H64a160 160 0 0 0 160-160V80a48 48 0 0 0-48-48z"
@@ -1968,8 +1802,8 @@
                                             </div>
 
                                             <div class="card-actions px-6">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="inline-block w-6 h-6"
-                                                    viewBox="0 0 512 512">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    class="inline-block w-6 h-6" viewBox="0 0 512 512">
                                                     <path fill="none" stroke="currentColor" stroke-linecap="round"
                                                         stroke-linejoin="round" stroke-width="48" d="M400 256H112" />
                                                 </svg>
@@ -1985,12 +1819,14 @@
                                 <div class="swiper-slide">
                                     <!-- Card Post -->
                                     <div class="aspect-w-2 aspect-h-1 p-8">
-                                        <div class="testimonial-card relative h-full border p-6 rounded-box transition-all bg-white">
+                                        <div
+                                            class="testimonial-card relative h-full border p-6 rounded-box transition-all bg-white">
 
                                             <!-- Card Image -->
                                             <figure class="absolute -left-5 -top-5 text-theme-orange">
                                                 <svg aria-hidden="true" focusable="false" role="img" class="w-10 h-10"
-                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 512 512">
                                                     <g>
                                                         <path fill="currentColor"
                                                             d="M464 256h-80v-64a64.06 64.06 0 0 1 64-64h8a23.94 23.94 0 0 0 24-23.88V56a23.94 23.94 0 0 0-23.88-24H448a160 160 0 0 0-160 160v240a48 48 0 0 0 48 48h128a48 48 0 0 0 48-48V304a48 48 0 0 0-48-48z"
@@ -2004,7 +1840,8 @@
 
                                             <figure class="absolute -right-5 -bottom-5 text-theme-orange">
                                                 <svg aria-hidden="true" focusable="false" role="img" class="w-10 h-10"
-                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 512 512">
                                                     <g class="fa-group">
                                                         <path fill="currentColor"
                                                             d="M176 32H48A48 48 0 0 0 0 80v128a48 48 0 0 0 48 48h80v64a64.06 64.06 0 0 1-64 64h-8a23.94 23.94 0 0 0-24 23.88V456a23.94 23.94 0 0 0 23.88 24H64a160 160 0 0 0 160-160V80a48 48 0 0 0-48-48z"
@@ -2028,8 +1865,8 @@
                                             </div>
 
                                             <div class="card-actions px-6">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="inline-block w-6 h-6"
-                                                    viewBox="0 0 512 512">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    class="inline-block w-6 h-6" viewBox="0 0 512 512">
                                                     <path fill="none" stroke="currentColor" stroke-linecap="round"
                                                         stroke-linejoin="round" stroke-width="48" d="M400 256H112" />
                                                 </svg>
@@ -2045,12 +1882,14 @@
                                 <div class="swiper-slide">
                                     <!-- Card Post -->
                                     <div class="aspect-w-2 aspect-h-1 p-8">
-                                        <div class="testimonial-card relative h-full border p-6 rounded-box transition-all bg-white">
+                                        <div
+                                            class="testimonial-card relative h-full border p-6 rounded-box transition-all bg-white">
 
                                             <!-- Card Image -->
                                             <figure class="absolute -left-5 -top-5 text-theme-orange">
                                                 <svg aria-hidden="true" focusable="false" role="img" class="w-10 h-10"
-                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 512 512">
                                                     <g>
                                                         <path fill="currentColor"
                                                             d="M464 256h-80v-64a64.06 64.06 0 0 1 64-64h8a23.94 23.94 0 0 0 24-23.88V56a23.94 23.94 0 0 0-23.88-24H448a160 160 0 0 0-160 160v240a48 48 0 0 0 48 48h128a48 48 0 0 0 48-48V304a48 48 0 0 0-48-48z"
@@ -2064,7 +1903,8 @@
 
                                             <figure class="absolute -right-5 -bottom-5 text-theme-orange">
                                                 <svg aria-hidden="true" focusable="false" role="img" class="w-10 h-10"
-                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 512 512">
                                                     <g class="fa-group">
                                                         <path fill="currentColor"
                                                             d="M176 32H48A48 48 0 0 0 0 80v128a48 48 0 0 0 48 48h80v64a64.06 64.06 0 0 1-64 64h-8a23.94 23.94 0 0 0-24 23.88V456a23.94 23.94 0 0 0 23.88 24H64a160 160 0 0 0 160-160V80a48 48 0 0 0-48-48z"
@@ -2088,8 +1928,8 @@
                                             </div>
 
                                             <div class="card-actions px-6">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="inline-block w-6 h-6"
-                                                    viewBox="0 0 512 512">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    class="inline-block w-6 h-6" viewBox="0 0 512 512">
                                                     <path fill="none" stroke="currentColor" stroke-linecap="round"
                                                         stroke-linejoin="round" stroke-width="48" d="M400 256H112" />
                                                 </svg>
@@ -2201,10 +2041,10 @@
         <!-- END: Main -->
 
         <!-- BEGIN: Footer -->
-        <footer class="min-h-section lg:min-h-section-lg bg-theme-alt">
+        <footer class="min-h-section lg:min-h-section-lg bg-theme">
 
             <!-- BEGIN: Top SVG Style -->
-            <div class="w-full text-theme-alt">
+            <div class="w-full text-theme">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="3000"
                     height="128" preserveAspectRatio="xMidYMid" viewBox="0 0 3000 128"
                     style="z-index:1;margin-right:-2px;display:block;background-repeat:initial;background-color:rgb(255, 255, 255)">
@@ -2380,6 +2220,7 @@
 
                 <!-- Row 2 / Widgets -->
                 <div class="grid grid-cols-1 lg:grid-cols-12 py-4 border-t border-b border-opacity-10">
+
                     <!-- Column 01 / Quick Links-->
                     <div class="lg:col-span-3 p-4 mb-6">
                         <h3 class="flex justify-between items-center w-max font-medium text-base xl:text-xl mb-4">
@@ -2428,15 +2269,15 @@
                         </ul>
                     </div>
 
-                    <!-- Column 02 / Quick Links-->
-                    <div class="lg:col-span-3 p-4 mb-6">
+                    <!-- Column 02 / Services Links-->
+                    <div class="lg:col-span-4 p-4 mb-6">
                         <h3 class="flex justify-between items-center w-max font-medium text-base xl:text-xl mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="w-7 h-7"
                                 viewBox="0 0 512 512">
                                 <path
-                                    d='M262.29 192.31a64 64 0 1057.4 57.4 64.13 64.13 0 00-57.4-57.4zM416.39 256a154.34 154.34 0 01-1.53 20.79l45.21 35.46a10.81 10.81 0 012.45 13.75l-42.77 74a10.81 10.81 0 01-13.14 4.59l-44.9-18.08a16.11 16.11 0 00-15.17 1.75A164.48 164.48 0 01325 400.8a15.94 15.94 0 00-8.82 12.14l-6.73 47.89a11.08 11.08 0 01-10.68 9.17h-85.54a11.11 11.11 0 01-10.69-8.87l-6.72-47.82a16.07 16.07 0 00-9-12.22 155.3 155.3 0 01-21.46-12.57 16 16 0 00-15.11-1.71l-44.89 18.07a10.81 10.81 0 01-13.14-4.58l-42.77-74a10.8 10.8 0 012.45-13.75l38.21-30a16.05 16.05 0 006-14.08c-.36-4.17-.58-8.33-.58-12.5s.21-8.27.58-12.35a16 16 0 00-6.07-13.94l-38.19-30A10.81 10.81 0 0149.48 186l42.77-74a10.81 10.81 0 0113.14-4.59l44.9 18.08a16.11 16.11 0 0015.17-1.75A164.48 164.48 0 01187 111.2a15.94 15.94 0 008.82-12.14l6.73-47.89A11.08 11.08 0 01213.23 42h85.54a11.11 11.11 0 0110.69 8.87l6.72 47.82a16.07 16.07 0 009 12.22 155.3 155.3 0 0121.46 12.57 16 16 0 0015.11 1.71l44.89-18.07a10.81 10.81 0 0113.14 4.58l42.77 74a10.8 10.8 0 01-2.45 13.75l-38.21 30a16.05 16.05 0 00-6.05 14.08c.33 4.14.55 8.3.55 12.47z'
-                                    fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round'
-                                    stroke-width='32' />
+                                    d="M262.29 192.31a64 64 0 1057.4 57.4 64.13 64.13 0 00-57.4-57.4zM416.39 256a154.34 154.34 0 01-1.53 20.79l45.21 35.46a10.81 10.81 0 012.45 13.75l-42.77 74a10.81 10.81 0 01-13.14 4.59l-44.9-18.08a16.11 16.11 0 00-15.17 1.75A164.48 164.48 0 01325 400.8a15.94 15.94 0 00-8.82 12.14l-6.73 47.89a11.08 11.08 0 01-10.68 9.17h-85.54a11.11 11.11 0 01-10.69-8.87l-6.72-47.82a16.07 16.07 0 00-9-12.22 155.3 155.3 0 01-21.46-12.57 16 16 0 00-15.11-1.71l-44.89 18.07a10.81 10.81 0 01-13.14-4.58l-42.77-74a10.8 10.8 0 012.45-13.75l38.21-30a16.05 16.05 0 006-14.08c-.36-4.17-.58-8.33-.58-12.5s.21-8.27.58-12.35a16 16 0 00-6.07-13.94l-38.19-30A10.81 10.81 0 0149.48 186l42.77-74a10.81 10.81 0 0113.14-4.59l44.9 18.08a16.11 16.11 0 0015.17-1.75A164.48 164.48 0 01187 111.2a15.94 15.94 0 008.82-12.14l6.73-47.89A11.08 11.08 0 01213.23 42h85.54a11.11 11.11 0 0110.69 8.87l6.72 47.82a16.07 16.07 0 009 12.22 155.3 155.3 0 0121.46 12.57 16 16 0 0015.11 1.71l44.89-18.07a10.81 10.81 0 0113.14 4.58l42.77 74a10.8 10.8 0 01-2.45 13.75l-38.21 30a16.05 16.05 0 00-6.05 14.08c.33 4.14.55 8.3.55 12.47z"
+                                    fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="32" />
                             </svg>
                             <span class="mr-2">
                                 خدمات
@@ -2445,39 +2286,39 @@
                         <ul class="footer-nav text-sm xl:text-base space-y-2">
                             <li>
                                 <a href="#">
-                                    خدمات
+                                    شستشوی نمای ساختمان
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    نمونه کارها
+                                    پیچ و رول‌پلاک نما
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    دستاوردها
+                                    نقاشی نمای ساختمان
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    بلاگ
+                                    نورپردازی ساختمان
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    درباره ما
+                                    جوشکاری در ارتفاع
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    ارتباط با ما
+                                    مشاهده تمامی خدمات...
                                 </a>
                             </li>
                         </ul>
                     </div>
 
                     <!-- Column 03 / Contact Details -->
-                    <div class="lg:col-span-4 p-4 mb-6">
+                    <div class="lg:col-span-5 p-4 mb-6">
                         <h3
                             class="flex justify-between items-center w-max text-white font-medium text-base xl:text-xl mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="w-7 h-7"
@@ -2561,22 +2402,6 @@
                         </ul>
                     </div>
 
-                    <!-- Column 04 / ?-->
-                    <div class="lg:col-span-2 p-4 mb-6">
-                        <h3
-                            class="flex justify-between items-center w-max text-white font-medium text-base xl:text-xl mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="w-8 h-8"
-                                viewBox="0 0 512 512">
-                                <path
-                                    d="M208 352h-64a96 96 0 010-192h64M304 160h64a96 96 0 010 192h-64M163.29 256h187.42"
-                                    fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="36" />
-                            </svg>
-                            <span class="mr-2">
-                                اینستاگرام آریاراد
-                            </span>
-                        </h3>
-                    </div>
                 </div>
 
                 <!-- Row 3 / Copyright -->
