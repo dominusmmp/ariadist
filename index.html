@@ -40,13 +40,22 @@
     
     <!-- Delete This Line In Production Mode -->
     
-  <script type="module" crossorigin src="./assets/index.6a9418a8.js"></script>
+  <script type="module" crossorigin src="./assets/index.5be54a2c.js"></script>
     <link rel="modulepreload" href="./assets/vendor.635b8fda.js">
-    <link rel="stylesheet" href="./assets/index.20d44222.css">
+    <link rel="stylesheet" href="./assets/index.6f01a92b.css">
   </head>
 
 <body>
-    <div class="app" x-data="{mobileMenuOpen: false, toggleMenu() { this.mobileMenuOpen = ! this.mobileMenuOpen }, contactOpen: false, toggleContact() { this.contactOpen = ! this.contactOpen }}">
+    <div class="app" x-data="{mobileMenuOpen: false, toggleMenu() { this.mobileMenuOpen = ! this.mobileMenuOpen }, contactOpen: false, toggleContact() { this.contactOpen = ! this.contactOpen }, sticky: false,
+    lastPos: window.scrollY + 0,
+    scroll() {
+        if (window.innerWidth >= 1024) {
+            this.sticky = window.scrollY > this.$refs.header.offsetHeight;
+        } else {
+            this.sticky = false;
+        }
+        this.lastPos = window.scrollY;
+    }}">
         <!-- BEGIN: Loader -->
         <!-- <div id="preloader"
             class="bg-theme-blue z-50 fixed top-0 bottom-0 left-0 right-0 w-screen h-screen overflow-hidden grid justify-center items-center select-none">
@@ -57,7 +66,7 @@
 
         <!-- BEGIN: Desktop Top Header -->
         <header id="top-header"
-            class="hidden bg-white lg:flex items-center justify-center z-10 border-b border-opacity-60 w-full h-11 lg:px-16">
+            class="hidden bg-white lg:flex items-center justify-center z-10 border-b border-opacity-60 w-full h-11 lg:px-16" x-ref="header">
             <!-- BEGIN: Desktop Top Header Start Section -->
             <div class="w-3/12 h-11 lg:flex items-center justify-start">
                 <!-- BEGIN: Language Buttons -->
@@ -134,7 +143,9 @@
 
         <!-- BEGIN: Navbar -->
         <nav id="navbar-side"
-            class="navbar-slide z-10 bg-white fixed lg:static top-0 right-0 left-0 flex items-center justify-between w-full min-h-mobile-nav lg:min-h-nav border-none mx-auto py-2 lg:py-0 px-2 lg:px-16 transition-all">
+            class="navbar-slide z-10 bg-white fixed lg:absolute top-11 right-0 left-0 flex items-center justify-between w-full min-h-mobile-nav lg:min-h-nav border-none mx-auto py-2 lg:py-0 px-2 lg:px-16"
+            @scroll.window="scroll()" :class="sticky && 'sticky'">
+
             <!-- BEGIN: Site Logo Mobile/Tablet -->
             <a href="#" class="lg:hidden mx-2">
                 <img src="./assets/logo.fc9836c8.png" alt="" width="96" height="48" loading="lazy" />
@@ -310,7 +321,7 @@
                 <!-- BEGIN: Desktop Contact us Button -->
                 <div class="hidden lg:block">
                     <a href="tel:098102154"
-                        class="btn bg-theme hover:bg-theme-hover border-theme hover:border-theme-hover rounded-full h-max">
+                        class="btn bg-theme-btn-contact hover:bg-theme-btn-contact-hover border-theme-btn-contact hover:border-theme-btn-contact-hover rounded-full h-max">
                         <span class="text-base font-bold">مشاوره رایگان</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 512 512"
                             class="inline-block mr-2 fill-current">
@@ -383,7 +394,7 @@
         <main>
 
             <!-- BEGIN: Hero Section -->
-            <section id="hero" class="h-hero w-full mt-16 lg:mt-0 relative">
+            <section id="hero" class="h-hero w-full mt-16 lg:mt-16 lg:pt-3 relative">
                 <div class="w-full">
                     <div id="hero-slider" class="swiper-container">
                         <div class="swiper-wrapper">
@@ -413,7 +424,7 @@
                                                 از طراحان گرافیک است.
                                             </p>
                                             <a href="#"
-                                                class="btn btn-md bg-theme-btn hover:bg-theme-btn-hover border-theme-btn hover:border-theme-btn-hover relative">
+                                                class="btn btn-md bg-theme-btn-section-hero hover:bg-theme-btn-section-hero-hover border-theme-btn-section-hero hover:border-theme-btn-section-hero-hover relative">
                                                 از اینجا شروع کنید
                                             </a>
                                         </div>
@@ -446,7 +457,7 @@
                                                 از طراحان گرافیک است.
                                             </p>
                                             <a href="#"
-                                                class="btn btn-md bg-theme-btn hover:bg-theme-btn-hover border-theme-btn hover:border-theme-btn-hover relative">
+                                                class="btn btn-md bg-theme-btn-section-hero hover:bg-theme-btn-section-hero-hover border-theme-btn-section-hero hover:border-theme-btn-section-hero-hover relative">
                                                 از اینجا شروع کنید
                                             </a>
                                         </div>
@@ -479,7 +490,7 @@
                                                 از طراحان گرافیک است.
                                             </p>
                                             <a href="#"
-                                                class="btn btn-md bg-theme-btn hover:bg-theme-btn-hover border-theme-btn hover:border-theme-btn-hover relative">
+                                                class="btn btn-md bg-theme-btn-section-hero hover:bg-theme-btn-section-hero-hover border-theme-btn-section-hero hover:border-theme-btn-section-hero-hover relative">
                                                 از اینجا شروع کنید
                                             </a>
                                         </div>
@@ -512,7 +523,7 @@
                                                 از طراحان گرافیک است.
                                             </p>
                                             <a href="#"
-                                                class="btn btn-md bg-theme-btn hover:bg-theme-btn-hover border-theme-btn hover:border-theme-btn-hover relative">
+                                                class="btn btn-md bg-theme-btn-section-hero hover:bg-theme-btn-section-hero-hover border-theme-btn-section-hero hover:border-theme-btn-section-hero-hover relative">
                                                 از اینجا شروع کنید
                                             </a>
                                         </div>
@@ -534,7 +545,7 @@
 
 
             <!-- BEGIN: Services Section -->
-            <section id="services" class="py-10 lg:py-20 min-h-section lg:min-h-section-lg">
+            <section id="services" class="py-12 lg:py-20 min-h-section lg:min-h-section-lg">
                 <div class="container">
 
                     <!-- Section Title -->
@@ -546,296 +557,303 @@
                             شرکت آریاراد با کادری مجرب آماده انجام هرگونه کار در ارتفاع می‌باشد.
                         </p>
                         <a href="#"
-                            class="btn btn-sm btn-outline hover:bg-theme-hover hover:border-theme-hover rounded-full">
+                            class="btn btn-sm bg-theme-btn-section-service border-theme-btn-section-service hover:bg-theme-btn-section-service-hover hover:border-theme-btn-section-service-hover rounded-full hidden lg:inline-flex">
                             مشاهده تمامی خدمات
                         </a>
                     </div>
 
                     <!-- Section Content / Services Items -->
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-10">
-                        <!-- Service Item 00 -->
-                        <div class="card progress-card rounded-box">
-
-                            <!-- Card Image -->
-                            <figure>
-                                <a href="#" class="block overflow-hidden rounded-box aspect-w-5 aspect-h-4">
-                                    <img src="./assets/cardbg03.6e953729.jpg"
-                                        class="w-full h-full object-cover transition-all duration-500" width="600"
-                                        height="600" alt="Test Image" loading="lazy" />
-                                </a>
-                            </figure>
-
-                            <!-- Card Content -->
-                            <div class="card-body relative z-1 p-0 px-6">
-                                <div class="card-content relative rounded-box bg-gray-50 -mt-10 p-4">
-                                    <!-- Card Top Progress Element, Don't Touch It -->
-                                    <div
-                                        class="card-progress w-0 bg-opacity-0 h-1 bg-info absolute top-0 left-0 transition-all duration-500 ease-in-out">
-                                    </div>
-                                    <!-- Card Top Progress Element, Don't Touch It / -->
-
-                                    <h2 class="card-title 2xl:text-2xl">
-                                        <a href="#" class="hover:text-theme transition-colors duration-200">
-                                            سازمان ارتباطات
-                                        </a>
-                                    </h2>
-
-                                    <p>
-                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                        استفاده
-                                        از
-                                        طراحان گرافیک است.
-                                    </p>
-
-                                    <div class="card-actions items-center justify-end">
-                                        <a href="#"
-                                            class="border-b border-transparent hover:border-black transition-colors duration-200">
-                                            اطلاعات بیشتر
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                class="w-4 h-4 inline-block" viewBox="0 0 512 512">
-                                                <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="48"
-                                                    d="M328 112L184 256l144 144" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
 
                         <!-- Service Item 00 -->
-                        <div class="card progress-card rounded-box">
+                        <div class="rounded-lg lg:rounded-box p-1 lg:p-0 border lg:border-none border-dashed hover:border-gray-500 transition-all duration-300">
+                            <div class="grid grid-cols-12 lg:grid-cols-1 service-card rounded-lg lg:rounded-box bg-gray-50 hover:bg-white lg:bg-transparent lg:hover:bg-transparent transition-all duration-300">
 
-                            <!-- Card Image -->
-                            <figure>
-                                <a href="#" class="block overflow-hidden rounded-box aspect-w-5 aspect-h-4">
-                                    <img src="./assets/cardbg03.6e953729.jpg"
-                                        class="w-full h-full object-cover transition-all duration-500" width="600"
-                                        height="600" alt="Test Image" loading="lazy" />
-                                </a>
-                            </figure>
+                                <!-- Card Image -->
+                                <figure class="col-span-4 lg:col-span-1 h-full lg:h-auto -mt-2 lg:mt-0 -mr-2 lg:mr-0 p-1 lg:p-0 border lg:border-none border-dashed border-gray-500 rounded-lg bg-gray-50 lg:bg-transparent transition-all duration-300">
+                                    <a href="#" class="block h-full lg:h-auto overflow-hidden rounded-lg lg:rounded-box aspect-w-5 aspect-h-4">
+                                        <img src="./assets/cardbg03.6e953729.jpg"
+                                            class="w-full h-full object-cover transition-all duration-500" width="600"
+                                            height="600" alt="Test Image" loading="lazy" />
+                                    </a>
+                                </figure>
 
-                            <!-- Card Content -->
-                            <div class="card-body relative z-1 p-0 px-6">
-                                <div class="card-content relative rounded-box bg-gray-50 -mt-10 p-4">
-                                    <!-- Card Top Progress Element, Don't Touch It -->
-                                    <div
-                                        class="card-progress w-0 bg-opacity-0 h-1 bg-info absolute top-0 left-0 transition-all duration-500 ease-in-out">
-                                    </div>
-                                    <!-- Card Top Progress Element, Don't Touch It / -->
+                                <!-- Card Content -->
+                                <div class="col-span-8 lg:col-span-1 card-body relative z-1 p-0 lg:px-6">
+                                    <div class="card-content relative rounded-lg lg:rounded-box bg-transparent lg:bg-gray-50 lg:-mt-10 p-4">
+                                        <h2 class="card-title 2xl:text-2xl">
+                                            <a href="#" class="hover:text-theme transition-colors duration-200">
+                                                پیچ و رول‌پلاک نما
+                                            </a>
+                                        </h2>
 
-                                    <h2 class="card-title 2xl:text-2xl">
-                                        <a href="#" class="hover:text-theme transition-colors duration-200">
-                                            سازمان ارتباطات
-                                        </a>
-                                    </h2>
+                                        <p class="hidden md:block">
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                            استفاده
+                                            از
+                                            طراحان گرافیک است.
+                                        </p>
 
-                                    <p>
-                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                        استفاده
-                                        از
-                                        طراحان گرافیک است.
-                                    </p>
-
-                                    <div class="card-actions items-center justify-end">
-                                        <a href="#"
-                                            class="border-b border-transparent hover:border-black transition-colors duration-200">
-                                            اطلاعات بیشتر
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                class="w-4 h-4 inline-block" viewBox="0 0 512 512">
-                                                <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="48"
-                                                    d="M328 112L184 256l144 144" />
-                                            </svg>
-                                        </a>
+                                        <div class="card-actions items-center justify-start lg:justify-end">
+                                            <a href="#"
+                                                class="border-b border-transparent hover:border-black transition-colors duration-200">
+                                                اطلاعات بیشتر
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    class="w-4 h-4 inline-block" viewBox="0 0 512 512">
+                                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="48"
+                                                        d="M328 112L184 256l144 144" />
+                                                </svg>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
-
-                        </div>
-
-                        <!-- Service Item 00 -->
-                        <div class="grid grid-cols-12 lg:grid-cols-1 progress-card rounded-lg lg:rounded-box">
-
-                            <!-- Card Image -->
-                            <figure class="col-span-4 lg:col-span-1 h-full lg:h-auto">
-                                <a href="#" class="block h-full lg:h-auto overflow-hidden rounded-r-lg lg:rounded-box aspect-w-5 aspect-h-4">
-                                    <img src="./assets/cardbg03.6e953729.jpg"
-                                        class="w-full h-full object-cover transition-all duration-500" width="600"
-                                        height="600" alt="Test Image" loading="lazy" />
-                                </a>
-                            </figure>
-
-                            <!-- Card Content -->
-                            <div class="col-span-8 lg:col-span-1 card-body relative z-1 p-0 lg:px-6">
-                                <div class="card-content relative rounded-l-lg lg:rounded-box bg-gray-50 lg:-mt-10 p-4">
-                                    <h2 class="card-title 2xl:text-2xl">
-                                        <a href="#" class="hover:text-theme transition-colors duration-200">
-                                            سازمان ارتباطات
-                                        </a>
-                                    </h2>
-
-                                    <p class="hidden md:block">
-                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                        استفاده
-                                        از
-                                        طراحان گرافیک است.
-                                    </p>
-
-                                    <div class="card-actions items-center justify-start lg:justify-end">
-                                        <a href="#"
-                                            class="border-b border-transparent hover:border-black transition-colors duration-200">
-                                            اطلاعات بیشتر
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                class="w-4 h-4 inline-block" viewBox="0 0 512 512">
-                                                <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="48"
-                                                    d="M328 112L184 256l144 144" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
 
                         <!-- Service Item 01 -->
-                        <div class="card card-icon border hover:bg-gray-200 transition-colors select-none">
-                            <figure class="flex justify-center items-center mt-6 mx-auto">
-                                <div
-                                    class="cards-icon flex justify-center items-center bg-theme rounded-full transform transition-all duration-500">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        class="w-16 h-16 text-white transform transition-all duration-500"
-                                        viewBox="0 0 512 512">
-                                        <path
-                                            d="M393.87 190a32.1 32.1 0 01-45.25 0l-26.57-26.57a32.09 32.09 0 010-45.26L382.19 58a1 1 0 00-.3-1.64c-38.82-16.64-89.15-8.16-121.11 23.57-30.58 30.35-32.32 76-21.12 115.84a31.93 31.93 0 01-9.06 32.08L64 380a48.17 48.17 0 1068 68l153.86-167a31.93 31.93 0 0131.6-9.13c39.54 10.59 84.54 8.6 114.72-21.19 32.49-32 39.5-88.56 23.75-120.93a1 1 0 00-1.6-.26z"
-                                            fill="none" stroke="currentColor" stroke-linecap="round"
-                                            stroke-miterlimit="10" stroke-width="32" />
-                                        <circle cx="96" cy="416" r="16" fill="currentColor" />
-                                    </svg>
-                                </div>
-                            </figure>
+                        <div class="rounded-lg lg:rounded-box p-1 lg:p-0 border lg:border-none border-dashed hover:border-gray-500 transition-all duration-300">
+                            <div class="grid grid-cols-12 lg:grid-cols-1 service-card rounded-lg lg:rounded-box bg-gray-50 hover:bg-white lg:bg-transparent lg:hover:bg-transparent transition-all duration-300">
 
-                            <div class="card-body">
-                                <h2 class="font-bold text-xl lg:text-2xl 2xl:text-3xl text-center mb-3">
-                                    شستشوی نما
-                                </h2>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-                                    گرافیک است.
-                                </p>
+                                <!-- Card Image -->
+                                <figure class="col-span-4 lg:col-span-1 h-full lg:h-auto -mt-2 lg:mt-0 -mr-2 lg:mr-0 p-1 lg:p-0 border lg:border-none border-dashed border-gray-500 rounded-lg bg-gray-50 lg:bg-transparent transition-all duration-300">
+                                    <a href="#" class="block h-full lg:h-auto overflow-hidden rounded-lg lg:rounded-box aspect-w-5 aspect-h-4">
+                                        <img src="./assets/cardbg04.bbbd9413.jpg"
+                                            class="w-full h-full object-cover transition-all duration-500" width="600"
+                                            height="600" alt="Test Image" loading="lazy" />
+                                    </a>
+                                </figure>
+
+                                <!-- Card Content -->
+                                <div class="col-span-8 lg:col-span-1 card-body relative z-1 p-0 lg:px-6">
+                                    <div class="card-content relative rounded-lg lg:rounded-box bg-transparent lg:bg-gray-50 lg:-mt-10 p-4">
+                                        <h2 class="card-title 2xl:text-2xl">
+                                            <a href="#" class="hover:text-theme transition-colors duration-200">
+                                                شستشوی نما
+                                            </a>
+                                        </h2>
+
+                                        <p class="hidden md:block">
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                            استفاده
+                                            از
+                                            طراحان گرافیک است.
+                                        </p>
+
+                                        <div class="card-actions items-center justify-start lg:justify-end">
+                                            <a href="#"
+                                                class="border-b border-transparent hover:border-black transition-colors duration-200">
+                                                اطلاعات بیشتر
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    class="w-4 h-4 inline-block" viewBox="0 0 512 512">
+                                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="48"
+                                                        d="M328 112L184 256l144 144" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
                         <!-- Service Item 02 -->
-                        <div class="card card-icon border hover:bg-gray-200 transition-colors select-none">
-                            <figure class="flex justify-center items-center mt-6 mx-auto">
-                                <div class="cards-icon flex justify-center items-center bg-theme mask mask-hexagon-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        class="w-16 h-16 text-white transform scale-95 transition-all duration-500"
-                                        viewBox="0 0 512 512">
-                                        <path
-                                            d="M452.37 59.63h0a40.49 40.49 0 00-57.26 0L184 294.74c23.08 4.7 46.12 27.29 49.26 49.26l219.11-227.11a40.49 40.49 0 000-57.26zM138 336c-29.88 0-54 24.5-54 54.86 0 23.95-20.88 36.57-36 36.57C64.56 449.74 92.82 464 120 464c39.78 0 72-32.73 72-73.14 0-30.36-24.12-54.86-54-54.86z"
-                                            fill="none" stroke="currentColor" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="32" />
-                                    </svg>
-                                </div>
-                            </figure>
+                        <div class="rounded-lg lg:rounded-box p-1 lg:p-0 border lg:border-none border-dashed hover:border-gray-500 transition-all duration-300">
+                            <div class="grid grid-cols-12 lg:grid-cols-1 service-card rounded-lg lg:rounded-box bg-gray-50 hover:bg-white lg:bg-transparent lg:hover:bg-transparent transition-all duration-300">
 
-                            <div class="card-body">
-                                <h2 class="font-bold text-xl lg:text-2xl 2xl:text-3xl text-center mb-3">
-                                    نقاشی نما
-                                </h2>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-                                    گرافیک است.
-                                </p>
+                                <!-- Card Image -->
+                                <figure class="col-span-4 lg:col-span-1 h-full lg:h-auto -mt-2 lg:mt-0 -mr-2 lg:mr-0 p-1 lg:p-0 border lg:border-none border-dashed border-gray-500 rounded-lg bg-gray-50 lg:bg-transparent transition-all duration-300">
+                                    <a href="#" class="block h-full lg:h-auto overflow-hidden rounded-lg lg:rounded-box aspect-w-5 aspect-h-4">
+                                        <img src="./assets/cardbg05.8b94f838.jpg"
+                                            class="w-full h-full object-cover transition-all duration-500" width="600"
+                                            height="600" alt="Test Image" loading="lazy" />
+                                    </a>
+                                </figure>
+
+                                <!-- Card Content -->
+                                <div class="col-span-8 lg:col-span-1 card-body relative z-1 p-0 lg:px-6">
+                                    <div class="card-content relative rounded-lg lg:rounded-box bg-transparent lg:bg-gray-50 lg:-mt-10 p-4">
+                                        <h2 class="card-title 2xl:text-2xl">
+                                            <a href="#" class="hover:text-theme transition-colors duration-200">
+                                                نقاشی نما
+                                            </a>
+                                        </h2>
+
+                                        <p class="hidden md:block">
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                            استفاده
+                                            از
+                                            طراحان گرافیک است.
+                                        </p>
+
+                                        <div class="card-actions items-center justify-start lg:justify-end">
+                                            <a href="#"
+                                                class="border-b border-transparent hover:border-black transition-colors duration-200">
+                                                اطلاعات بیشتر
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    class="w-4 h-4 inline-block" viewBox="0 0 512 512">
+                                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="48"
+                                                        d="M328 112L184 256l144 144" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
                         <!-- Service Item 03 -->
-                        <div class="card border hover:bg-gray-200 transition-colors select-none">
-                            <div class="card-body">
-                                <div
-                                    class="card-icon bg-no-repeat bg-center w-36 h-36 flex justify-center items-center mb-6 mx-auto bg-theme rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        class="w-16 h-16 text-white" viewBox="0 0 512 512">
-                                        <path
-                                            d="M393.87 190a32.1 32.1 0 01-45.25 0l-26.57-26.57a32.09 32.09 0 010-45.26L382.19 58a1 1 0 00-.3-1.64c-38.82-16.64-89.15-8.16-121.11 23.57-30.58 30.35-32.32 76-21.12 115.84a31.93 31.93 0 01-9.06 32.08L64 380a48.17 48.17 0 1068 68l153.86-167a31.93 31.93 0 0131.6-9.13c39.54 10.59 84.54 8.6 114.72-21.19 32.49-32 39.5-88.56 23.75-120.93a1 1 0 00-1.6-.26z"
-                                            fill="none" stroke="currentColor" stroke-linecap="round"
-                                            stroke-miterlimit="10" stroke-width="32" />
-                                        <circle cx="96" cy="416" r="16" fill="currentColor" />
-                                    </svg>
+                        <div class="rounded-lg lg:rounded-box p-1 lg:p-0 border lg:border-none border-dashed hover:border-gray-500 transition-all duration-300">
+                            <div class="grid grid-cols-12 lg:grid-cols-1 service-card rounded-lg lg:rounded-box bg-gray-50 hover:bg-white lg:bg-transparent lg:hover:bg-transparent transition-all duration-300">
+
+                                <!-- Card Image -->
+                                <figure class="col-span-4 lg:col-span-1 h-full lg:h-auto -mt-2 lg:mt-0 -mr-2 lg:mr-0 p-1 lg:p-0 border lg:border-none border-dashed border-gray-500 rounded-lg bg-gray-50 lg:bg-transparent transition-all duration-300">
+                                    <a href="#" class="block h-full lg:h-auto overflow-hidden rounded-lg lg:rounded-box aspect-w-5 aspect-h-4">
+                                        <img src="./assets/cardbg06.23fb7086.jpg"
+                                            class="w-full h-full object-cover transition-all duration-500" width="600"
+                                            height="600" alt="Test Image" loading="lazy" />
+                                    </a>
+                                </figure>
+
+                                <!-- Card Content -->
+                                <div class="col-span-8 lg:col-span-1 card-body relative z-1 p-0 lg:px-6">
+                                    <div class="card-content relative rounded-lg lg:rounded-box bg-transparent lg:bg-gray-50 lg:-mt-10 p-4">
+                                        <h2 class="card-title 2xl:text-2xl">
+                                            <a href="#" class="hover:text-theme transition-colors duration-200">
+                                                جوشکاری در ارتفاع
+                                            </a>
+                                        </h2>
+
+                                        <p class="hidden md:block">
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                            استفاده
+                                            از
+                                            طراحان گرافیک است.
+                                        </p>
+
+                                        <div class="card-actions items-center justify-start lg:justify-end">
+                                            <a href="#"
+                                                class="border-b border-transparent hover:border-black transition-colors duration-200">
+                                                اطلاعات بیشتر
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    class="w-4 h-4 inline-block" viewBox="0 0 512 512">
+                                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="48"
+                                                        d="M328 112L184 256l144 144" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <h2 class="font-bold text-xl lg:text-2xl 2xl:text-3xl text-center mb-3">
-                                    شستشوی نما
-                                </h2>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-                                    گرافیک است.
-                                </p>
                             </div>
                         </div>
 
                         <!-- Service Item 04 -->
-                        <a href="#"
-                            class="card text-center transform shadow-md hover:shadow-xl hover:-translate-y-1 transition-all">
-                            <figure class="px-5 pt-5">
-                                <img src="./assets/cardbg03.6e953729.jpg" alt="" width="112" height="112"
-                                    class="mx-auto rounded-box" loading="lazy" />
-                            </figure>
-                            <div class="card-body">
-                                <h2 class="font-bold text-xl lg:text-2xl 2xl:text-3xl text-center mb-3">
-                                    شستشوی نما
-                                </h2>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-                                    گرافیک است.
-                                </p>
-                                <!-- <div class="justify-center card-actions"></div> -->
+                        <div class="rounded-lg lg:rounded-box p-1 lg:p-0 border lg:border-none border-dashed hover:border-gray-500 transition-all duration-300">
+                            <div class="grid grid-cols-12 lg:grid-cols-1 service-card rounded-lg lg:rounded-box bg-gray-50 hover:bg-white lg:bg-transparent lg:hover:bg-transparent transition-all duration-300">
+
+                                <!-- Card Image -->
+                                <figure class="col-span-4 lg:col-span-1 h-full lg:h-auto -mt-2 lg:mt-0 -mr-2 lg:mr-0 p-1 lg:p-0 border lg:border-none border-dashed border-gray-500 rounded-lg bg-gray-50 lg:bg-transparent transition-all duration-300">
+                                    <a href="#" class="block h-full lg:h-auto overflow-hidden rounded-lg lg:rounded-box aspect-w-5 aspect-h-4">
+                                        <img src="./assets/cardbg03.6e953729.jpg"
+                                            class="w-full h-full object-cover transition-all duration-500" width="600"
+                                            height="600" alt="Test Image" loading="lazy" />
+                                    </a>
+                                </figure>
+
+                                <!-- Card Content -->
+                                <div class="col-span-8 lg:col-span-1 card-body relative z-1 p-0 lg:px-6">
+                                    <div class="card-content relative rounded-lg lg:rounded-box bg-transparent lg:bg-gray-50 lg:-mt-10 p-4">
+                                        <h2 class="card-title 2xl:text-2xl">
+                                            <a href="#" class="hover:text-theme transition-colors duration-200">
+                                                نورپردازی نما
+                                            </a>
+                                        </h2>
+
+                                        <p class="hidden md:block">
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                            استفاده
+                                            از
+                                            طراحان گرافیک است.
+                                        </p>
+
+                                        <div class="card-actions items-center justify-start lg:justify-end">
+                                            <a href="#"
+                                                class="border-b border-transparent hover:border-black transition-colors duration-200">
+                                                اطلاعات بیشتر
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    class="w-4 h-4 inline-block" viewBox="0 0 512 512">
+                                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="48"
+                                                        d="M328 112L184 256l144 144" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                        </a>
+                        </div>
 
                         <!-- Service Item 05 -->
-                        <a href="#"
-                            class="card text-center transform shadow-md hover:shadow-xl hover:-translate-y-1 transition-all">
-                            <figure class="px-5 pt-5">
-                                <img src="./assets/cardbg03.6e953729.jpg" alt="" width="112" height="112"
-                                    class="mx-auto rounded-box" loading="lazy" />
-                            </figure>
-                            <div class="card-body">
-                                <h2 class="font-bold text-xl lg:text-2xl 2xl:text-3xl text-center mb-3">
-                                    شستشوی نما
-                                </h2>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-                                    گرافیک است.
-                                </p>
-                                <!-- <div class="justify-center card-actions"></div> -->
-                            </div>
-                        </a>
+                        <div class="rounded-lg lg:rounded-box p-1 lg:p-0 border lg:border-none border-dashed hover:border-gray-500 transition-all duration-300">
+                            <div class="grid grid-cols-12 lg:grid-cols-1 service-card rounded-lg lg:rounded-box bg-gray-50 hover:bg-white lg:bg-transparent lg:hover:bg-transparent transition-all duration-300">
 
-                        <!-- Service Item 06 -->
-                        <a href="#"
-                            class="card text-center transform shadow-md hover:shadow-xl hover:-translate-y-1 transition-all">
-                            <figure class="px-5 pt-5">
-                                <img src="./assets/cardbg03.6e953729.jpg" alt="" width="112" height="112"
-                                    class="mx-auto rounded-box" loading="lazy" />
-                            </figure>
-                            <div class="card-body">
-                                <h2 class="font-bold text-xl lg:text-2xl 2xl:text-3xl text-center mb-3">
-                                    شستشوی نما
-                                </h2>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-                                    گرافیک است.
-                                </p>
-                                <!-- <div class="justify-center card-actions"></div> -->
-                            </div>
-                        </a>
+                                <!-- Card Image -->
+                                <figure class="col-span-4 lg:col-span-1 h-full lg:h-auto -mt-2 lg:mt-0 -mr-2 lg:mr-0 p-1 lg:p-0 border lg:border-none border-dashed border-gray-500 rounded-lg bg-gray-50 lg:bg-transparent transition-all duration-300">
+                                    <a href="#" class="block h-full lg:h-auto overflow-hidden rounded-lg lg:rounded-box aspect-w-5 aspect-h-4">
+                                        <img src="./assets/cardbg02.82226f53.jpg"
+                                            class="w-full h-full object-cover transition-all duration-500" width="600"
+                                            height="600" alt="Test Image" loading="lazy" />
+                                    </a>
+                                </figure>
 
+                                <!-- Card Content -->
+                                <div class="col-span-8 lg:col-span-1 card-body relative z-1 p-0 lg:px-6">
+                                    <div class="card-content relative rounded-lg lg:rounded-box bg-transparent lg:bg-gray-50 lg:-mt-10 p-4">
+                                        <h2 class="card-title 2xl:text-2xl">
+                                            <a href="#" class="hover:text-theme transition-colors duration-200">
+                                                آموزش کار در ارتفاع
+                                            </a>
+                                        </h2>
+
+                                        <p class="hidden md:block">
+                                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                            استفاده
+                                            از
+                                            طراحان گرافیک است.
+                                        </p>
+
+                                        <div class="card-actions items-center justify-start lg:justify-end">
+                                            <a href="#"
+                                                class="border-b border-transparent hover:border-black transition-colors duration-200">
+                                                اطلاعات بیشتر
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    class="w-4 h-4 inline-block" viewBox="0 0 512 512">
+                                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="48"
+                                                        d="M328 112L184 256l144 144" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section More Button In Mobile -->
+                    <div class="w-max max-w-full text-center mx-auto lg:hidden mt-8">
+                        <a href="#"
+                            class="btn btn-sm btn-wide bg-theme-btn-section-service border-theme-btn-section-service hover:bg-theme-btn-section-service-hover hover:border-theme-btn-section-service-hover rounded-full">
+                            مشاهده تمامی خدمات
+                        </a>
                     </div>
 
                 </div>
@@ -844,7 +862,7 @@
 
 
             <!-- BEGIN: Corp Video Section -->
-            <section id="corpvideo" class="py-10 lg:py-20 min-h-section lg:min-h-section-lg">
+            <section id="corpvideo" class="py-12 lg:py-20 min-h-section lg:min-h-section-lg">
                 <div class="container">
                     <div
                         class="border-base-300 hover:border-black focus-within:border-black border-2 border-dashed rounded-lg lg:rounded-3xl p-1 md:p-2 lg:p-3 2xl:p-4 transition-colors duration-300">
@@ -862,7 +880,7 @@
             <!-- END: Corp Video Section -->
 
             <!-- BEGIN: Team Section -->
-            <section id="team" class="py-10 lg:py-20 min-h-section lg:min-h-section-lg">
+            <section id="team" class="py-12 lg:py-20 min-h-section lg:min-h-section-lg">
                 <div class="container">
 
                     <!-- Section Title -->
@@ -874,8 +892,8 @@
                             شرکت آریاراد متشکل از تیمی مجرب و متخصص دارای گواهینامه رسمی و با تجربه کافی می‌باشد.
                         </p>
                         <a href="#"
-                            class="btn btn-sm btn-outline hover:bg-theme-hover hover:border-theme-hover rounded-full">
-                            مشاهده تمامی خدمات
+                            class="btn btn-sm bg-theme-btn-section-team border-theme-btn-section-team hover:bg-theme-btn-section-team-hover hover:border-theme-btn-section-team-hover rounded-full hidden lg:inline-flex">
+                            درباره ما بیشتر بخوانید
                         </a>
                     </div>
 
@@ -965,12 +983,21 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Section More Button In Mobile -->
+                    <div class="w-max max-w-full text-center mx-auto lg:hidden mt-8">
+                        <a href="#"
+                            class="btn btn-sm btn-wide bg-theme-btn-section-team border-theme-btn-section-team hover:bg-theme-btn-section-team-hover hover:border-theme-btn-section-team-hover rounded-full">
+                            درباره ما بیشتر بخوانید
+                        </a>
+                    </div>
+
                 </div>
             </section>
             <!-- End: Team Section -->
 
             <!-- BEGIN: Works Section -->
-            <section id="works" class="py-10 lg:py-20 min-h-section lg:min-h-section-lg bg-rope bg-theme">
+            <section id="works" class="py-12 lg:py-20 min-h-section lg:min-h-section-lg bg-rope bg-theme">
                 <div class="container">
 
                     <!-- Section Title -->
@@ -982,7 +1009,7 @@
                             شرکت آریاراد در تلاش است تا خدمات خود را با بهترین کیفیت ارائه دهد.
                         </p>
                         <a href="#"
-                            class="btn btn-sm bg-theme-btn hover:bg-theme-btn-hover border-theme-btn hover:border-theme-btn-hover rounded-full">
+                            class="btn btn-sm bg-theme-btn-section-work hover:bg-theme-btn-section-work-hover border-theme-btn-section-work hover:border-theme-btn-section-work-hover rounded-full hidden lg:inline-flex">
                             مشاهده سایر مشتریان
                         </a>
                     </div>
@@ -1035,7 +1062,7 @@
 
                                         <!-- Card Image -->
                                         <figure class="row-start-1 col-start-1 aspect-w-7 aspect-h-10 z-0">
-                                            <img src="./assets/cardbg04.bfd360dd.jpg"
+                                            <img src="./assets/cardbg04.bbbd9413.jpg"
                                                 class="w-full h-full object-cover transition-all duration-500"
                                                 width="600" height="600" alt="Test Image" loading="lazy" />
                                         </figure>
@@ -1071,7 +1098,7 @@
 
                                         <!-- Card Image -->
                                         <figure class="row-start-1 col-start-1 aspect-w-7 aspect-h-10 z-0">
-                                            <img src="./assets/cardbg05.5a235d40.jpg"
+                                            <img src="./assets/cardbg05.8b94f838.jpg"
                                                 class="w-full h-full object-cover transition-all duration-500"
                                                 width="600" height="600" alt="Test Image" loading="lazy" />
                                         </figure>
@@ -1107,7 +1134,7 @@
 
                                         <!-- Card Image -->
                                         <figure class="row-start-1 col-start-1 aspect-w-7 aspect-h-10 z-0">
-                                            <img src="./assets/cardbg06.e3286cd4.jpg"
+                                            <img src="./assets/cardbg06.23fb7086.jpg"
                                                 class="w-full h-full object-cover transition-all duration-500"
                                                 width="600" height="600" alt="Test Image" loading="lazy" />
                                         </figure>
@@ -1138,6 +1165,15 @@
 
                             </div>
                         </div>
+
+                        <!-- Section More Button In Mobile -->
+                        <div class="w-max max-w-full text-center mx-auto lg:hidden mt-8">
+                            <a href="#"
+                                class="btn btn-sm btn-wide bg-theme-btn-section-work border-theme-btn-section-work hover:bg-theme-btn-section-work-hover hover:border-theme-btn-section-work-hover rounded-full">
+                                مشاهده سایر مشتریان
+                            </a>
+                        </div>
+
                     </div>
 
                 </div>
@@ -1145,7 +1181,7 @@
             <!-- END: Works Section -->
 
             <!-- BEGIN: FAQ -->
-            <section id="faq" class="py-10 lg:py-20 min-h-section lg:min-h-section-lg mt-40">
+            <section id="faq" class="py-12 lg:py-20 min-h-section lg:min-h-section-lg mt-40">
                 <div class="container">
                     <div class="p-6 lg:p-16 bg-gray-50 rounded-box">
 
@@ -1306,7 +1342,7 @@
                             <div class="rounded-box mt-4 mb-2 text-center hidden lg:block">
                                 <div class="collapse-title">
                                     <a href="tel:0910000000"
-                                        class="btn btn-sm lg:btn-md btn-wide bg-theme-orange border-theme-orange hover:bg-theme-orange-hover hover:border-theme-orange-hover">
+                                        class="btn btn-sm lg:btn-md btn-wide bg-theme-btn-section-faq border-theme-btn-section-faq hover:bg-theme-btn-section-faq-hover hover:border-theme-btn-section-faq-hover">
                                         مشاوره رایگان تلفنی
                                     </a>
                                 </div>
@@ -1319,16 +1355,16 @@
             <!-- End: FAQ -->
 
             <!-- BEGIN: Blog Section -->
-            <section id="blog-posts" class="py-10 lg:py-20 min-h-section lg:min-h-section-lg">
+            <section id="blog-posts" class="py-12 lg:py-20 min-h-section lg:min-h-section-lg">
                 <div class="container">
 
                     <!-- Section Title -->
-                    <div class="w-max max-w-full mb-8 text-center mx-auto ">
+                    <div class="w-max max-w-full mb-8 text-center mx-auto">
                         <h2 class="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-bold mb-4">
                             آخرین مقالات
                         </h2>
                         <a href="#"
-                            class="btn btn-sm bg-theme-btn hover:bg-theme-btn-hover border-theme-btn hover:border-theme-btn-hover rounded-full">
+                            class="btn btn-sm bg-theme-btn-section-blog hover:bg-theme-btn-section-blog-hover border-theme-btn-section-blog hover:border-theme-btn-section-blog-hover rounded-full hidden lg:inline-flex">
                             مشاهده همه مقالات
                         </a>
                     </div>
@@ -1666,12 +1702,20 @@
                         </div>
                     </div>
 
+                    <!-- Section More Button In Mobile -->
+                    <div class="w-max max-w-full text-center mx-auto lg:hidden mt-8">
+                        <a href="#"
+                            class="btn btn-sm btn-wide bg-theme-btn-section-blog border-theme-btn-section-blog hover:bg-theme-btn-section-blog-hover hover:border-theme-btn-section-blog-hover rounded-full">
+                            مشاهده همه مقالات
+                        </a>
+                    </div>
+
                 </div>
             </section>
             <!-- END: Blog Section -->
 
-            <!-- BEGIN: Blog Section -->
-            <section id="testimonial-posts" class="py-10 lg:py-20 min-h-section lg:min-h-section-lg">
+            <!-- BEGIN: Testimonials Section -->
+            <section id="testimonial-posts" class="py-12 lg:py-20 min-h-section lg:min-h-section-lg">
                 <div class="container">
 
                     <!-- Section Title -->
@@ -1947,12 +1991,12 @@
 
                 </div>
             </section>
-            <!-- END: Blog Section -->
+            <!-- END: Testimonials Section -->
 
             <!-- BEGIN: SMS Subscribe Section -->
-            <section id="sms-subscribe" class="py-10 lg:py-20 min-h-section">
+            <section id="sms-subscribe" class="py-12 lg:py-20 min-h-section">
                 <div class="container">
-                    <div class="border rounded-box p-4 lg:p-4">
+                    <div class="border rounded-box p-4 lg:p-4 focus-within:border-theme focus-within:border-opacity-75 transition-colors duration-300">
                         <div class="grid grid-cols-1 lg:grid-cols-3">
                             <!-- Subscribe Side -->
                             <div class="lg:col-span-2 px-2 lg:px-4 lg:border-l mb-4 lg:mb-0">
@@ -1965,10 +2009,10 @@
                                     <div class="w-full lg:w-9/12 max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg relative">
                                         <input type="email" name="email" id="email"
                                             placeholder="شماره موبایل خود را وارد نمایید"
-                                            class="w-full pl-16 input input-ghost bg-base-200 rounded-full" required>
+                                            class="w-full pl-24 input input-ghost bg-base-200 rounded-full" required>
                                         <button
-                                            class="absolute left-0 top-0 btn btn-ghost hover:bg-transparent rounded-full rounded-r-none text-xl">
-                                            +
+                                            class="absolute left-0 top-0 btn border-none bg-theme-btn-section-subscribe hover:bg-theme-btn-section-subscribe-hover rounded-full text-theme-btn-section-subscribe-text text-sm">
+                                            عضویت
                                         </button>
                                     </div>
                                 </form>
