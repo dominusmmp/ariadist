@@ -37,7 +37,7 @@
     <!-- END: Default Head -->
 
     
-  <script type="module" crossorigin src="./assets/js/ignore.js"></script>
+  <script type="module" crossorigin src="./assets/js/ignore3.js"></script>
     <link rel="modulepreload" href="./assets/js/index.js">
     <link rel="stylesheet" href="./assets/css/index.css">
   </head>
@@ -392,377 +392,42 @@
         <!-- BEGIN: Main -->
         <main>
 
-            <!-- BEGIN: Hero Section -->
-            <!-- Don't Use First Section Which Is Hidden, It's Been For Test -->
-            <section class="mt-16 lg:mt-16 lg:pt-3 relative hidden">
-                <div class="container py-8">
-                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold pr-3 border-b border-gray-200">
-                        بلاگ
-                    </h1>
-                </div>
-            </section>
+            <article>
 
-            <section class="mt-16 lg:mt-16 lg:pt-3 relative">
-                <div
-                    class="grid grid-rows-1 min-h-head-section md:min-h-head-section-md lg:min-h-head-section-lg max-h-head-section md:max-h-head-section-md lg:max-h-head-section-lg">
-                    <img src="./assets/img/hero-04.jpg" alt=""
-                        class="w-full min-h-head-section md:min-h-head-section-md lg:min-h-head-section-lg max-h-head-section md:max-h-head-section-md lg:max-h-head-section-lg object-cover">
-
+                <!-- BEGIN: Hero Section -->
+                <header class="mt-16 lg:mt-16 lg:pt-3 relative">
                     <div
-                        class="flex bg-black bg-opacity-50 backdrop-filter backdrop-blur-sm relative min-h-head-section md:min-h-head-section-md lg:min-h-head-section-lg max-h-head-section md:max-h-head-section-md lg:max-h-head-section-lg">
-                        <div class="container flex flex-col justify-center py-3">
-                            <h1 class="max-w-max text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                                بلاگ
-                            </h1>
+                        class="grid grid-rows-1 min-h-head-section md:min-h-head-section-md lg:min-h-head-section-lg max-h-head-section md:max-h-head-section-md lg:max-h-head-section-lg">
+                        <img src="./assets/img/hero-04.jpg" alt=""
+                            class="w-full min-h-head-section md:min-h-head-section-md lg:min-h-head-section-lg max-h-head-section md:max-h-head-section-md lg:max-h-head-section-lg object-cover">
+
+                        <div
+                            class="flex bg-black bg-opacity-50 backdrop-filter backdrop-blur-sm relative min-h-head-section md:min-h-head-section-md lg:min-h-head-section-lg max-h-head-section md:max-h-head-section-md lg:max-h-head-section-lg">
+                            <div class="container flex flex-col justify-center py-3">
+                                <h1 class="max-w-max text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                                    بلاگ
+                                </h1>
+                            </div>
                         </div>
+                    </div>
+                </header>
+                <!-- END: Hero Section -->
+
+                <!-- BEGIN: Blog Section -->
+                <div class="py-12 lg:py-20 min-h-section lg:min-h-section-lg">
+                    <div class="container">
+
+                        <!-- Post Content -->
+                        <section class="flex flex-col">
+                            <div class="bg-white">
+                                <div class=""></div>
+                            </div>
+                        </section>
+
                     </div>
                 </div>
-            </section>
-            <!-- END: Hero Section -->
-
-            <!-- BEGIN: Blog Section -->
-            <section class="py-12 lg:py-20 min-h-section lg:min-h-section-lg">
-                <div class="container">
-
-                    <!-- Section Content -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                        <!-- Card Post 1 -->
-                        <div class="card blog-card bordered rounded-box bg-white">
-
-                            <!-- Card Image -->
-                            <figure>
-                                <a href="#" class="block aspect-w-3 aspect-h-2 overflow-hidden rounded-box relative">
-                                    <img src="./assets/img/cardbg01.jpg"
-                                        class="w-full h-full object-cover transition-all" width="600" height="600"
-                                        alt="Test Image" loading="lazy" />
-
-                                    <!-- Card Image Overlay - Don't Touch -->
-                                    <div
-                                        class="blog-card-img-overlay w-full h-full text-white bg-black bg-opacity-50 absolute inset-0 transition-all duration-200 ease-in-out flex flex-col items-center justify-center opacity-0">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            class="w-12 h-12 mb-4 transition-all duration-200" viewBox="0 0 512 512">
-                                            <path
-                                                d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
-                                                fill="none" stroke="currentColor" stroke-miterlimit="10"
-                                                stroke-width="32" />
-                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="32"
-                                                d="M256 176v160M336 256H176" />
-                                        </svg>
-                                        <span class="block text-2xl">
-                                            مشاهده مقاله
-                                        </span>
-                                    </div>
-                                    <!-- Card Image Overlay - Don't Touch / -->
-                                </a>
-                            </figure>
-
-                            <!-- Card Content -->
-                            <div class="card-body relative p-6">
-                                <h2 class="card-title 2xl:text-2xl">
-                                    <a href="#" class="hover:text-theme transition-colors duration-200">
-                                        گره‌های مهم و کاربردی
-                                    </a>
-                                </h2>
-
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                    استفاده
-                                    از
-                                    طراحان گرافیک است...
-                                </p>
-                            </div>
-
-                        </div>
-
-                        <!-- Card Post 2 -->
-                        <div class="card blog-card bordered rounded-box bg-white">
-
-                            <!-- Card Image -->
-                            <figure>
-                                <a href="#" class="block aspect-w-3 aspect-h-2 overflow-hidden rounded-box relative">
-                                    <img src="./assets/img/cardbg02.jpg"
-                                        class="w-full h-full object-cover transition-all" width="600" height="600"
-                                        alt="Test Image" loading="lazy" />
-
-                                    <!-- Card Image Overlay - Don't Touch -->
-                                    <div
-                                        class="blog-card-img-overlay w-full h-full text-white bg-black bg-opacity-50 absolute inset-0 transition-all duration-200 ease-in-out flex flex-col items-center justify-center opacity-0">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            class="w-12 h-12 mb-4 transition-all duration-200" viewBox="0 0 512 512">
-                                            <path
-                                                d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
-                                                fill="none" stroke="currentColor" stroke-miterlimit="10"
-                                                stroke-width="32" />
-                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="32"
-                                                d="M256 176v160M336 256H176" />
-                                        </svg>
-                                        <span class="block text-2xl">
-                                            مشاهده مقاله
-                                        </span>
-                                    </div>
-                                    <!-- Card Image Overlay - Don't Touch / -->
-                                </a>
-                            </figure>
-
-                            <!-- Card Content -->
-                            <div class="card-body relative p-6">
-                                <h2 class="card-title 2xl:text-2xl">
-                                    <a href="#" class="hover:text-theme transition-colors duration-200">
-                                        گره‌های مهم و کاربردی
-                                    </a>
-                                </h2>
-
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                    استفاده
-                                    از
-                                    طراحان گرافیک است...
-                                </p>
-                            </div>
-
-                        </div>
-
-                        <!-- Card Post 3 -->
-                        <div class="card blog-card bordered rounded-box bg-white">
-
-                            <!-- Card Image -->
-                            <figure>
-                                <a href="#" class="block aspect-w-3 aspect-h-2 overflow-hidden rounded-box relative">
-                                    <img src="./assets/img/cardbg03.jpg"
-                                        class="w-full h-full object-cover transition-all" width="600" height="600"
-                                        alt="Test Image" loading="lazy" />
-
-                                    <!-- Card Image Overlay - Don't Touch -->
-                                    <div
-                                        class="blog-card-img-overlay w-full h-full text-white bg-black bg-opacity-50 absolute inset-0 transition-all duration-200 ease-in-out flex flex-col items-center justify-center opacity-0">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            class="w-12 h-12 mb-4 transition-all duration-200" viewBox="0 0 512 512">
-                                            <path
-                                                d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
-                                                fill="none" stroke="currentColor" stroke-miterlimit="10"
-                                                stroke-width="32" />
-                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="32"
-                                                d="M256 176v160M336 256H176" />
-                                        </svg>
-                                        <span class="block text-2xl">
-                                            مشاهده مقاله
-                                        </span>
-                                    </div>
-                                    <!-- Card Image Overlay - Don't Touch / -->
-                                </a>
-                            </figure>
-
-                            <!-- Card Content -->
-                            <div class="card-body relative p-6">
-                                <h2 class="card-title 2xl:text-2xl">
-                                    <a href="#" class="hover:text-theme transition-colors duration-200">
-                                        گره‌های مهم و کاربردی
-                                    </a>
-                                </h2>
-
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                    استفاده
-                                    از
-                                    طراحان گرافیک است...
-                                </p>
-                            </div>
-
-                        </div>
-
-                        <!-- Card Post 4 -->
-                        <div class="card blog-card bordered rounded-box bg-white">
-
-                            <!-- Card Image -->
-                            <figure>
-                                <a href="#" class="block aspect-w-3 aspect-h-2 overflow-hidden rounded-box relative">
-                                    <img src="./assets/img/cardbg01.jpg"
-                                        class="w-full h-full object-cover transition-all" width="600" height="600"
-                                        alt="Test Image" loading="lazy" />
-
-                                    <!-- Card Image Overlay - Don't Touch -->
-                                    <div
-                                        class="blog-card-img-overlay w-full h-full text-white bg-black bg-opacity-50 absolute inset-0 transition-all duration-200 ease-in-out flex flex-col items-center justify-center opacity-0">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            class="w-12 h-12 mb-4 transition-all duration-200" viewBox="0 0 512 512">
-                                            <path
-                                                d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
-                                                fill="none" stroke="currentColor" stroke-miterlimit="10"
-                                                stroke-width="32" />
-                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="32"
-                                                d="M256 176v160M336 256H176" />
-                                        </svg>
-                                        <span class="block text-2xl">
-                                            مشاهده مقاله
-                                        </span>
-                                    </div>
-                                    <!-- Card Image Overlay - Don't Touch / -->
-                                </a>
-                            </figure>
-
-                            <!-- Card Content -->
-                            <div class="card-body relative p-6">
-                                <h2 class="card-title 2xl:text-2xl">
-                                    <a href="#" class="hover:text-theme transition-colors duration-200">
-                                        گره‌های مهم و کاربردی
-                                    </a>
-                                </h2>
-
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                    استفاده
-                                    از
-                                    طراحان گرافیک است...
-                                </p>
-                            </div>
-
-                        </div>
-
-                        <!-- Card Post 5 -->
-                        <div class="card blog-card bordered rounded-box bg-white">
-
-                            <!-- Card Image -->
-                            <figure>
-                                <a href="#" class="block aspect-w-3 aspect-h-2 overflow-hidden rounded-box relative">
-                                    <img src="./assets/img/cardbg02.jpg"
-                                        class="w-full h-full object-cover transition-all" width="600" height="600"
-                                        alt="Test Image" loading="lazy" />
-
-                                    <!-- Card Image Overlay - Don't Touch -->
-                                    <div
-                                        class="blog-card-img-overlay w-full h-full text-white bg-black bg-opacity-50 absolute inset-0 transition-all duration-200 ease-in-out flex flex-col items-center justify-center opacity-0">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            class="w-12 h-12 mb-4 transition-all duration-200" viewBox="0 0 512 512">
-                                            <path
-                                                d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
-                                                fill="none" stroke="currentColor" stroke-miterlimit="10"
-                                                stroke-width="32" />
-                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="32"
-                                                d="M256 176v160M336 256H176" />
-                                        </svg>
-                                        <span class="block text-2xl">
-                                            مشاهده مقاله
-                                        </span>
-                                    </div>
-                                    <!-- Card Image Overlay - Don't Touch / -->
-                                </a>
-                            </figure>
-
-                            <!-- Card Content -->
-                            <div class="card-body relative p-6">
-                                <h2 class="card-title 2xl:text-2xl">
-                                    <a href="#" class="hover:text-theme transition-colors duration-200">
-                                        گره‌های مهم و کاربردی
-                                    </a>
-                                </h2>
-
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                    استفاده
-                                    از
-                                    طراحان گرافیک است...
-                                </p>
-                            </div>
-
-                        </div>
-
-                        <!-- Card Post 6 -->
-                        <div class="card blog-card bordered rounded-box bg-white">
-
-                            <!-- Card Image -->
-                            <figure>
-                                <a href="#" class="block aspect-w-3 aspect-h-2 overflow-hidden rounded-box relative">
-                                    <img src="./assets/img/cardbg03.jpg"
-                                        class="w-full h-full object-cover transition-all" width="600" height="600"
-                                        alt="Test Image" loading="lazy" />
-
-                                    <!-- Card Image Overlay - Don't Touch -->
-                                    <div
-                                        class="blog-card-img-overlay w-full h-full text-white bg-black bg-opacity-50 absolute inset-0 transition-all duration-200 ease-in-out flex flex-col items-center justify-center opacity-0">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            class="w-12 h-12 mb-4 transition-all duration-200" viewBox="0 0 512 512">
-                                            <path
-                                                d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
-                                                fill="none" stroke="currentColor" stroke-miterlimit="10"
-                                                stroke-width="32" />
-                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="32"
-                                                d="M256 176v160M336 256H176" />
-                                        </svg>
-                                        <span class="block text-2xl">
-                                            مشاهده مقاله
-                                        </span>
-                                    </div>
-                                    <!-- Card Image Overlay - Don't Touch / -->
-                                </a>
-                            </figure>
-
-                            <!-- Card Content -->
-                            <div class="card-body relative p-6">
-                                <h2 class="card-title 2xl:text-2xl">
-                                    <a href="#" class="hover:text-theme transition-colors duration-200">
-                                        گره‌های مهم و کاربردی
-                                    </a>
-                                </h2>
-
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                                    استفاده
-                                    از
-                                    طراحان گرافیک است...
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Section Pagination -->
-                    <div class="pagination flex justify-center items-center py-12 lg:py-20">
-
-                        <!-- Previous Button -->
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" with="16" height="16"
-                                viewBox="0 0 512 512">
-                                <path fill="currentColor"
-                                    d="M477.5 273L283.1 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.7-22.7c-9.4-9.4-9.4-24.5 0-33.9l154-154.7-154-154.7c-9.3-9.4-9.3-24.5 0-33.9l22.7-22.7c9.4-9.4 24.6-9.4 33.9 0L477.5 239c9.3 9.4 9.3 24.6 0 34zm-192-34L91.1 44.7c-9.4-9.4-24.6-9.4-33.9 0L34.5 67.4c-9.4 9.4-9.4 24.5 0 33.9l154 154.7-154 154.7c-9.3 9.4-9.3 24.5 0 33.9l22.7 22.7c9.4 9.4 24.6 9.4 33.9 0L285.5 273c9.3-9.4 9.3-24.6 0-34z" />
-                            </svg>
-                        </a>
-
-                        <!-- Page Numbers Start -->
-                        <a href="#" class="active">
-                            1
-                        </a>
-
-                        <a href="#">
-                            2
-                        </a>
-
-                        <a href="#">
-                            3
-                        </a>
-                        <!-- Page Numbers End -->
-
-                        <!-- Next Button -->
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform rotate-180" with="16"
-                                height="16" viewBox="0 0 512 512">
-                                <path fill="currentColor"
-                                    d="M477.5 273L283.1 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.7-22.7c-9.4-9.4-9.4-24.5 0-33.9l154-154.7-154-154.7c-9.3-9.4-9.3-24.5 0-33.9l22.7-22.7c9.4-9.4 24.6-9.4 33.9 0L477.5 239c9.3 9.4 9.3 24.6 0 34zm-192-34L91.1 44.7c-9.4-9.4-24.6-9.4-33.9 0L34.5 67.4c-9.4 9.4-9.4 24.5 0 33.9l154 154.7-154 154.7c-9.3 9.4-9.3 24.5 0 33.9l22.7 22.7c9.4 9.4 24.6 9.4 33.9 0L285.5 273c9.3-9.4 9.3-24.6 0-34z" />
-                            </svg>
-                        </a>
-
-                    </div>
-
-                </div>
-            </section>
-            <!-- END: Blog Section -->
+                <!-- END: Blog Section -->
+            </article>
 
             <!-- BEGIN: SMS Subscribe Section -->
             <section id="sms-subscribe" class="py-12 lg:py-20 min-h-section">
