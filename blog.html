@@ -85,7 +85,7 @@
             <div class="w-9/12 h-11 lg:flex items-center justify-end">
                 <!-- BEGIN: Desktop Header Mobile Number -->
                 <a href="tel:09120000000"
-                    class="inline-flex w-max h-full place-items-center ml-6 font-bold font-lato text-gray-500"
+                    class="inline-flex w-max h-full place-items-center rtl:ml-6 ltr:mr-6 font-bold font-lato text-gray-500"
                     dir="ltr">
                     +98 (912) 000 0000
                 </a>
@@ -100,7 +100,7 @@
                 <!-- END: Desktop Header Mail Address -->
 
                 <!-- BEGIN: Desktop Header Social Media Icons -->
-                <div class="h-12 flex items-center justify-between mr-6">
+                <div class="h-12 flex items-center justify-between rtl:mr-6 ltr:ml-6">
                     <a href="tg://resolve?domain=ariaradco" class="telegram mx-2 text-gray-600">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
                             <path
@@ -152,7 +152,7 @@
             <!-- END: Site Logo Mobile/Tablet -->
 
             <!-- BEGIN: Mobile Menu Buttons -->
-            <div class="order-first lg:hidden flex place-items-center">
+            <div class="rtl:order-first ltr:order-last lg:hidden flex place-items-center">
                 <!-- Navigation Menu Open/Close Button -->
                 <button id="mobile-nav-btn"
                     class="text-gray-800 btn p-0 mx-2 bg-transparent hover:bg-transparent border-none"
@@ -168,7 +168,8 @@
                 </button>
 
                 <!-- Mobile Top Call Button -->
-                <button class="text-gray-800 btn p-0 mx-2 bg-transparent hover:bg-transparent border-none"
+                <button
+                    class="text-gray-800 btn p-0 mx-2 bg-transparent hover:bg-transparent border-none rtl:order-last ltr:order-first"
                     @click="toggleContact()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
                         <path
@@ -192,7 +193,7 @@
                 :class="mobileMenuOpen && 'show'">
 
                 <!-- BEGIN: Site Logo Desktop -->
-                <div class="hidden lg:inline-block ml-8 mr-2 lg:ml-0 lg:mr-0">
+                <div class="hidden lg:inline-block">
                     <a href="./">
                         <img src="./assets/img/logo.png" alt="" class="w-auto max-h-12" width="96" height="48"
                             loading="lazy" />
@@ -205,9 +206,11 @@
                 <div class="lg:hidden text-center mx-auto bg-theme text-white">
 
                     <!-- BEGIN: Mobile Side Menu Top Section: Header Row -->
-                    <div class="flex justify-end items-center p-3">
+                    <div class="flex items-center p-3">
                         <!-- BEGIN: Mobile Side Menu Close Button -->
-                        <button id="mobile-menu-back" class="inline-block focus:outline-none" @click="toggleMenu()">
+                        <button id="mobile-menu-back"
+                            class="inline-block rtl:justify-self-end ltr:justify-self-start focus:outline-none"
+                            @click="toggleMenu()">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none"
                                 viewBox="0 0 512 512" class="inline-block stroke-current">
                                 <path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
@@ -299,8 +302,8 @@
                             دستاوردها
                         </a>
                     </li>
-                    <li class="active">
-                        <a href="#" class="btn text-base btn-ghost hover:bg-transparent w-full lg:w-none">
+                    <li>
+                        <a href="./blog.html" class="btn text-base btn-ghost hover:bg-transparent w-full lg:w-none">
                             بلاگ
                         </a>
                     </li>
@@ -317,13 +320,17 @@
                 <div class="hidden lg:block">
                     <div @click="toggleContact()"
                         class="btn bg-theme-btn-contact hover:bg-theme-btn-contact-hover border-theme-btn-contact hover:border-theme-btn-contact-hover rounded-full h-max cursor-pointer">
-                        <span class="text-base font-bold">مشاوره رایگان</span>
+
+                        <span class="text-base font-bold rtl:ml-2 ltr:mr-2">مشاوره رایگان</span>
+
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 512 512"
-                            class="inline-block mr-2 fill-current">
+                            class="inline-block fill-current">
                             <path
                                 d='M391 480c-19.52 0-46.94-7.06-88-30-49.93-28-88.55-53.85-138.21-103.38C116.91 298.77 93.61 267.79 61 208.45c-36.84-67-30.56-102.12-23.54-117.13C45.82 73.38 58.16 62.65 74.11 52a176.3 176.3 0 0128.64-15.2c1-.43 1.93-.84 2.76-1.21 4.95-2.23 12.45-5.6 21.95-2 6.34 2.38 12 7.25 20.86 16 18.17 17.92 43 57.83 52.16 77.43 6.15 13.21 10.22 21.93 10.23 31.71 0 11.45-5.76 20.28-12.75 29.81-1.31 1.79-2.61 3.5-3.87 5.16-7.61 10-9.28 12.89-8.18 18.05 2.23 10.37 18.86 41.24 46.19 68.51s57.31 42.85 67.72 45.07c5.38 1.15 8.33-.59 18.65-8.47 1.48-1.13 3-2.3 4.59-3.47 10.66-7.93 19.08-13.54 30.26-13.54h.06c9.73 0 18.06 4.22 31.86 11.18 18 9.08 59.11 33.59 77.14 51.78 8.77 8.84 13.66 14.48 16.05 20.81 3.6 9.53.21 17-2 22-.37.83-.78 1.74-1.21 2.75a176.49 176.49 0 01-15.29 28.58c-10.63 15.9-21.4 28.21-39.38 36.58A67.42 67.42 0 01391 480z' />
                         </svg>
+
                         <span class="sr-only">Desktop Contact Us Button</span>
+
                     </div>
                 </div>
                 <!-- END: Desktop Contact us Button -->
@@ -715,22 +722,29 @@
                         class="border rounded-box p-4 lg:p-4 focus-within:border-theme focus-within:border-opacity-75 transition-colors duration-300">
                         <div class="grid grid-cols-1 lg:grid-cols-3">
                             <!-- Subscribe Side -->
-                            <div class="lg:col-span-2 px-2 lg:px-4 lg:border-l mb-4 lg:mb-0">
+                            <div class="lg:col-span-2 px-2 lg:px-4 lg:rtl:border-l lg:ltr:border-r mb-4 lg:mb-0">
                                 <form action="" class="form-control lg:flex-row items-center justify-between">
+
                                     <label class="label">
                                         <span class="label-text">
                                             اطلاع از آخرین‌های آریاراد
                                         </span>
                                     </label>
+
                                     <div class="w-full lg:w-9/12 max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg relative">
+
                                         <input type="email" name="email" id="email"
                                             placeholder="شماره موبایل خود را وارد نمایید"
-                                            class="w-full pl-24 input input-ghost bg-base-200 rounded-full" required>
+                                            class="w-full rtl:pl-24 ltr:pr-24 input input-ghost bg-gray-50 rounded-full"
+                                            required>
+
                                         <button
-                                            class="absolute left-0 top-0 btn border-none bg-theme-btn-section-subscribe hover:bg-theme-btn-section-subscribe-hover rounded-full text-theme-btn-section-subscribe-text text-sm">
+                                            class="absolute rtl:left-0 ltr:right-0 top-0 btn border-none bg-theme-btn-section-subscribe hover:bg-theme-btn-section-subscribe-hover rounded-full text-theme-btn-section-subscribe-text text-sm">
                                             عضویت
                                         </button>
+
                                     </div>
+
                                 </form>
                             </div>
 
@@ -810,10 +824,6 @@
                     style="z-index:1;margin-right:-2px;display:block;background-repeat:initial;background-color:rgb(255, 255, 255)">
                     <g transform="translate(1500,64) scale(1,-1) translate(-1500,-64)"
                         style="transform:matrix(1, 0, 0, -1, 0, 128)">
-                        <!-- <linearGradient id="lg-0.21788861306136043" x1="0" x2="1" y1="0" y2="0">
-                            <stop stop-color="#002f6c" offset="0"></stop>
-                            <stop stop-color="#002f6c" offset="1"></stop>
-                        </linearGradient> -->
                         <path d="M 0 0 L 0 119.555 Q 500 136.099 1000 104.942 T 2000 74.1629 T 3000 54.1808 L 3000 0 Z"
                             fill="currentColor" opacity="0.5"></path>
                         <path d="M 0 0 L 0 72.9837 Q 500 111.909 1000 87.3432 T 2000 53.1136 T 3000 29.3568 L 3000 0 Z"
@@ -831,27 +841,34 @@
 
                     <!-- Company Short Information And Social -->
                     <div class="lg:col-span-6 flex flex-col p-4 mb-4">
+
                         <!-- Company Short Information -->
                         <div class="flex flex-col mb-8">
+
                             <figure class="mb-3">
                                 <img src="./assets/img/logo-white.png" alt=""
                                     class="w-auto max-h-12 select-disabled bg-transparent" width="96" height="48">
                             </figure>
+
                             <h3 class="font-black text-base xl:text-xl mb-2">
                                 تخصص و تجربه ما، تضمین کار ماست.
                             </h3>
+
                             <p class="text-sm xl:text-base">
                                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
                                 گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و
                                 برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی
                                 می‌باشد.
                             </p>
+
                         </div>
 
                         <!-- Company Social -->
                         <div class="flex flex-wrap items-center justify-center lg:justify-start w-full">
+
+                            <!-- Telegram -->
                             <a href="#" class="text-white mx-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" width="24"
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 512 512" width="24"
                                     height="24">
                                     <path
                                         d="M53.12 199.94l400-151.39a8 8 0 0110.33 10.33l-151.39 400a8 8 0 01-15-.34l-67.4-166.09a16 16 0 00-10.11-10.11L53.46 215a8 8 0 01-.34-15.06zM460 52L227 285"
@@ -859,8 +876,10 @@
                                         stroke-width="32" />
                                 </svg>
                             </a>
+
+                            <!-- Instagram -->
                             <a href="#" class="text-white mx-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" width="24"
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 512 512" width="24"
                                     height="24">
                                     <path
                                         d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z"
@@ -870,24 +889,30 @@
                                         fill="currentColor" />
                                 </svg>
                             </a>
+
+                            <!-- Twitter -->
                             <a href="#" class="text-white mx-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" width="24"
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 512 512" width="24"
                                     height="24">
                                     <path
                                         d="M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z"
                                         fill="currentColor" />
                                 </svg>
                             </a>
+
+                            <!-- Youtube -->
                             <a href="#" class="text-white mx-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" width="24"
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 512 512" width="24"
                                     height="24">
                                     <path
                                         d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149 1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5 58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5 2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9zM207 353.89v-196.5l145 98.2z"
                                         fill="currentColor" />
                                 </svg>
                             </a>
+
+                            <!-- Email -->
                             <a href="#" class="text-white mx-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" width="24"
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 512 512" width="24"
                                     height="24">
                                     <path
                                         d="M320 254.27c-4.5 51-40.12 80-80.55 80s-67.34-35.82-63.45-80 37.12-80 77.55-80 70.33 36 66.45 80z"
@@ -899,17 +924,19 @@
                                         stroke-width="32" />
                                 </svg>
                             </a>
+
                         </div>
+
                     </div>
 
                     <!-- Certificates -->
                     <div class="lg:col-span-6 flex flex-col justify-center items-center p-4 mb-4">
+
                         <h3 class="flex justify-between items-center w-max font-medium text-base xl:text-xl mb-4">
-                            <span class="mr-2">
-                                گواهینامه‌ها / افتخارات ما
-                            </span>
+                            گواهینامه‌ها / افتخارات ما
                         </h3>
-                        <div class="w-full h-max rounded-boxz border border-opacity-10 p-4">
+
+                        <div class="w-full h-max rounded-2xl border border-opacity-10 p-4">
                             <!-- Slider main container -->
                             <div id="certificate-slider" class="swiper">
                                 <!-- Additional required wrapper -->
@@ -974,6 +1001,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
                 </div>
@@ -983,7 +1011,9 @@
 
                     <!-- Column 01 / Quick Links-->
                     <div class="lg:col-span-3 p-4 mb-6">
+
                         <h3 class="flex justify-between items-center w-max font-medium text-base xl:text-xl mb-4">
+
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="w-8 h-8"
                                 viewBox="0 0 512 512">
                                 <path
@@ -991,10 +1021,13 @@
                                     fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="36" />
                             </svg>
-                            <span class="mr-2">
+
+                            <span class="rtl:mr-2 ltr:ml-2">
                                 دسترسی سریع
                             </span>
+
                         </h3>
+
                         <ul class="footer-nav text-sm xl:text-base space-y-2">
                             <li>
                                 <a href="#">
@@ -1027,11 +1060,14 @@
                                 </a>
                             </li>
                         </ul>
+
                     </div>
 
                     <!-- Column 02 / Services Links-->
                     <div class="lg:col-span-4 p-4 mb-6">
+
                         <h3 class="flex justify-between items-center w-max font-medium text-base xl:text-xl mb-4">
+
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="w-7 h-7"
                                 viewBox="0 0 512 512">
                                 <path
@@ -1039,10 +1075,13 @@
                                     fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="32" />
                             </svg>
-                            <span class="mr-2">
+
+                            <span class="rtl:mr-2 ltr:ml-2">
                                 خدمات
                             </span>
+
                         </h3>
+
                         <ul class="footer-nav text-sm xl:text-base space-y-2">
                             <li>
                                 <a href="#">
@@ -1075,12 +1114,15 @@
                                 </a>
                             </li>
                         </ul>
+
                     </div>
 
                     <!-- Column 03 / Contact Details -->
                     <div class="lg:col-span-5 p-4 mb-6">
+
                         <h3
                             class="flex justify-between items-center w-max text-white font-medium text-base xl:text-xl mb-4">
+
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="w-7 h-7"
                                 viewBox="0 0 512 512">
                                 <path
@@ -1096,24 +1138,34 @@
                                 <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"
                                     d="M256 48v416M464 256H48" />
                             </svg>
-                            <span class="mr-2">
+
+                            <span class="rtl:mr-2 ltr:ml-2">
                                 راه‌های ارتباطی
                             </span>
+
                         </h3>
+
                         <ul class="text-sm xl:text-base space-y-3">
+
                             <li>
+
                                 <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mx-1" width="16" height="16"
                                     viewBox="0 0 512 512">
                                     <path
                                         d="M391 480c-19.52 0-46.94-7.06-88-30-49.93-28-88.55-53.85-138.21-103.38C116.91 298.77 93.61 267.79 61 208.45c-36.84-67-30.56-102.12-23.54-117.13C45.82 73.38 58.16 62.65 74.11 52a176.3 176.3 0 0128.64-15.2c1-.43 1.93-.84 2.76-1.21 4.95-2.23 12.45-5.6 21.95-2 6.34 2.38 12 7.25 20.86 16 18.17 17.92 43 57.83 52.16 77.43 6.15 13.21 10.22 21.93 10.23 31.71 0 11.45-5.76 20.28-12.75 29.81-1.31 1.79-2.61 3.5-3.87 5.16-7.61 10-9.28 12.89-8.18 18.05 2.23 10.37 18.86 41.24 46.19 68.51s57.31 42.85 67.72 45.07c5.38 1.15 8.33-.59 18.65-8.47 1.48-1.13 3-2.3 4.59-3.47 10.66-7.93 19.08-13.54 30.26-13.54h.06c9.73 0 18.06 4.22 31.86 11.18 18 9.08 59.11 33.59 77.14 51.78 8.77 8.84 13.66 14.48 16.05 20.81 3.6 9.53.21 17-2 22-.37.83-.78 1.74-1.21 2.75a176.49 176.49 0 01-15.29 28.58c-10.63 15.9-21.4 28.21-39.38 36.58A67.42 67.42 0 01391 480z"
                                         fill="currentColor" />
                                 </svg>
+
                                 <span>شماره تماس:</span>
+
                                 <a href="tel:02131564845" class="font-lato" dir="ltr">
                                     +98-9120000000
                                 </a>
+
                             </li>
+
                             <li>
+
                                 <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mx-1" width="16" height="16"
                                     viewBox="0 0 512 512">
                                     <path
@@ -1125,41 +1177,57 @@
                                         fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="40" />
                                 </svg>
+
                                 <span>ایمیل:</span>
+
                                 <a href="mailto:ariaradra@gmail.com" class="font-lato" dir="ltr">
                                     ariaradra@gmail.com
                                 </a>
+
                             </li>
+
                             <li>
+
                                 <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mx-1" width="16" height="16"
                                     viewBox="0 0 512 512">
                                     <path
                                         d="M414.73 97.1A222.14 222.14 0 00256.94 32C134 32 33.92 131.58 33.87 254a220.61 220.61 0 0029.78 111L32 480l118.25-30.87a223.63 223.63 0 00106.6 27h.09c122.93 0 223-99.59 223.06-222A220.18 220.18 0 00414.73 97.1zM256.94 438.66h-.08a185.75 185.75 0 01-94.36-25.72l-6.77-4-70.17 18.32 18.73-68.09-4.41-7A183.46 183.46 0 0171.53 254c0-101.73 83.21-184.5 185.48-184.5a185 185 0 01185.33 184.64c-.04 101.74-83.21 184.52-185.4 184.52zm101.69-138.19c-5.57-2.78-33-16.2-38.08-18.05s-8.83-2.78-12.54 2.78-14.4 18-17.65 21.75-6.5 4.16-12.07 1.38-23.54-8.63-44.83-27.53c-16.57-14.71-27.75-32.87-31-38.42s-.35-8.56 2.44-11.32c2.51-2.49 5.57-6.48 8.36-9.72s3.72-5.56 5.57-9.26.93-6.94-.46-9.71-12.54-30.08-17.18-41.19c-4.53-10.82-9.12-9.35-12.54-9.52-3.25-.16-7-.2-10.69-.2a20.53 20.53 0 00-14.86 6.94c-5.11 5.56-19.51 19-19.51 46.28s20 53.68 22.76 57.38 39.3 59.73 95.21 83.76a323.11 323.11 0 0031.78 11.68c13.35 4.22 25.5 3.63 35.1 2.2 10.71-1.59 33-13.42 37.63-26.38s4.64-24.06 3.25-26.37-5.11-3.71-10.69-6.48z"
                                         fill-rule="evenodd" fill="currentColor" />
                                 </svg>
+
                                 <span>شماره واتساپ:</span>
+
                                 <a href="tel:02131564845" class="font-lato" dir="ltr">
                                     +98-9120000000
                                 </a>
+
                             </li>
+
                             <li>
+
                                 <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mx-1" width="16" height="16"
                                     viewBox="0 0 512 512">
                                     <path
                                         d="M473 39.05a24 24 0 00-25.5-5.46L47.47 185h-.08a24 24 0 001 45.16l.41.13 137.3 58.63a16 16 0 0015.54-3.59L422 80a7.07 7.07 0 0110 10L226.66 310.26a16 16 0 00-3.59 15.54l58.65 137.38c.06.2.12.38.19.57 3.2 9.27 11.3 15.81 21.09 16.25h1a24.63 24.63 0 0023-15.46L478.39 64.62A24 24 0 00473 39.05z"
                                         fill="currentColor" />
                                 </svg>
+
                                 <span>پشتیبانی تلگرام:</span>
+
                                 <a href="tg:resolve?domain=runiversity" class="font-lato" dir="ltr">
                                     @ariaradco
                                 </a>
+
                             </li>
+
                             <li>
-                                <p class="w-max pl-6 pt-4 mt-4 border-t border-white border-opacity-20">
+                                <p class="w-max px-1 pt-4 mt-4 border-t border-white border-opacity-20">
                                     ساعات پاسخگویی: 9 صبح الی 9 شب
                                 </p>
                             </li>
+
                         </ul>
+
                     </div>
 
                 </div>
@@ -1182,11 +1250,15 @@
                     <div class="flex justify-center items-center text-xs lg:text-sm">
                         <p>
                             &#60;
-                            طراحی و توسعه توسط
+
+                            Development By
+
                             <a href="#">
-                                رایاپیکسل
+                                RayaPixel
                             </a>
+
                             &#47;&#62;
+
                         </p>
                     </div>
 
@@ -1316,10 +1388,12 @@
 
                     <!-- Contact Details -->
                     <ul class="lg:max-w-max grid grid-cols-2 gap-6 mb-6">
+
                         <li class="my-2">
                             <a href="tel:02131564845"
                                 class="flex items-center py-2 px-6 border border-gray-200 hover:border-gray-400 rounded-lg transition-colors duration-200">
-                                <svg id="call-outline" class="inline-block w-6 h-6 mx-2 transform -rotate-90" width="24"
+                                <svg id="call-outline"
+                                    class="inline-block w-6 h-6 mx-2 transform rtl:-rotate-90 ltr:rotate-0" width="24"
                                     height="24" viewBox="0 0 512 512">
                                     <path
                                         d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z"
@@ -1332,6 +1406,7 @@
                                 </span>
                             </a>
                         </li>
+
                         <li class="my-2">
                             <a href="mailto:ariaradra@gmail.com"
                                 class="flex items-center py-2 px-6 border border-gray-200 hover:border-gray-400 rounded-lg transition-colors duration-200">
@@ -1352,6 +1427,7 @@
                                 </span>
                             </a>
                         </li>
+
                         <li class="my-2">
                             <a href="whatsapp://send?phone=#"
                                 class="flex items-center py-2 px-6 border border-gray-200 hover:border-gray-400 rounded-lg transition-colors duration-200">
@@ -1367,6 +1443,7 @@
                                 </span>
                             </a>
                         </li>
+
                         <li class="my-2">
                             <a href="tg://resolve?domain=ariarad"
                                 class="flex items-center py-2 px-6 border border-gray-200 hover:border-gray-400 rounded-lg transition-colors duration-200">
@@ -1383,6 +1460,7 @@
                                 </span>
                             </a>
                         </li>
+
                     </ul>
 
                     <!-- Contact Time -->
@@ -1399,55 +1477,86 @@
         <!-- BEGIN: Mobile Contact us Button -->
         <div id="mobile-contactus-btn" class="w-full max-w-screen fixed -bottom-36 left-0 right-0 z-10 p-4"
             :class="contactOpen && 'show'">
+            <div class="relative">
 
-            <!-- Contact BTN Container -->
-            <div class="grid grid-cols-3 gap-2 bg-white bg-opacity-50 rounded-box p-1">
-                <!-- Call BTN -->
-                <a href="tel:09120000000"
-                    class="flex flex-col place-items-center py-2 bg-theme-orange text-white text-center rounded-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="block mx-auto stroke-current mb-2" width="28"
-                        height="28" fill="none" viewBox="0 0 512 512">
-                        <path xmlns="http://www.w3.org/2000/svg"
-                            d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z"
-                            fill="currentColor" stroke="none" stroke-miterlimit="10" stroke-width="32" />
-                    </svg>
-                    <span class="text-xs block">
-                        مشاوره تلفنی
-                    </span>
-                    <span class="sr-only">Mobile Contact Us Button</span>
-                </a>
+                <!-- Contact BTN Container -->
+                <div class="grid grid-cols-3 gap-2 bg-white bg-opacity-50 rounded-box p-1">
 
-                <!-- Whatsapp BTN -->
-                <a href="https://wa.me/989120000000"
-                    class="flex flex-col place-items-center py-2 bg-theme-green text-white text-center rounded-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="block mx-auto stroke-current mb-2" width="28"
-                        height="28" fill="none" viewBox="0 0 512 512">
-                        <path
-                            d="M414.73 97.1A222.14 222.14 0 00256.94 32C134 32 33.92 131.58 33.87 254a220.61 220.61 0 0029.78 111L32 480l118.25-30.87a223.63 223.63 0 00106.6 27h.09c122.93 0 223-99.59 223.06-222A220.18 220.18 0 00414.73 97.1zM256.94 438.66h-.08a185.75 185.75 0 01-94.36-25.72l-6.77-4-70.17 18.32 18.73-68.09-4.41-7A183.46 183.46 0 0171.53 254c0-101.73 83.21-184.5 185.48-184.5a185 185 0 01185.33 184.64c-.04 101.74-83.21 184.52-185.4 184.52zm101.69-138.19c-5.57-2.78-33-16.2-38.08-18.05s-8.83-2.78-12.54 2.78-14.4 18-17.65 21.75-6.5 4.16-12.07 1.38-23.54-8.63-44.83-27.53c-16.57-14.71-27.75-32.87-31-38.42s-.35-8.56 2.44-11.32c2.51-2.49 5.57-6.48 8.36-9.72s3.72-5.56 5.57-9.26.93-6.94-.46-9.71-12.54-30.08-17.18-41.19c-4.53-10.82-9.12-9.35-12.54-9.52-3.25-.16-7-.2-10.69-.2a20.53 20.53 0 00-14.86 6.94c-5.11 5.56-19.51 19-19.51 46.28s20 53.68 22.76 57.38 39.3 59.73 95.21 83.76a323.11 323.11 0 0031.78 11.68c13.35 4.22 25.5 3.63 35.1 2.2 10.71-1.59 33-13.42 37.63-26.38s4.64-24.06 3.25-26.37-5.11-3.71-10.69-6.48z"
-                            fill-rule="evenodd" fill="currentColor" />
-                    </svg>
-                    <span class="text-xs block">
-                        پشتیبان واتس‌اپ
-                    </span>
-                    <span class="sr-only">Mobile Contact Us Button</span>
-                </a>
+                    <!-- Call BTN -->
+                    <a href="tel:09120000000"
+                        class="flex flex-col place-items-center py-2 bg-theme-orange text-white text-center rounded-box">
 
-                <!-- Telegram BTN -->
-                <a href="tg://resolve?domain=ariaradco"
-                    class="flex flex-col place-items-center py-2 bg-social-telegram text-white text-center rounded-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="block mx-auto stroke-current mb-2" width="28"
-                        height="28" fill="none" viewBox="0 0 512 512">
-                        <path
-                            d="M473 39.05a24 24 0 00-25.5-5.46L47.47 185h-.08a24 24 0 001 45.16l.41.13 137.3 58.63a16 16 0 0015.54-3.59L422 80a7.07 7.07 0 0110 10L226.66 310.26a16 16 0 00-3.59 15.54l58.65 137.38c.06.2.12.38.19.57 3.2 9.27 11.3 15.81 21.09 16.25h1a24.63 24.63 0 0023-15.46L478.39 64.62A24 24 0 00473 39.05z"
-                            fill="currentColor" />
+                        <svg xmlns="http://www.w3.org/2000/svg" class="block mx-auto stroke-current mb-2" width="28"
+                            height="28" fill="none" viewBox="0 0 512 512">
+                            <path xmlns="http://www.w3.org/2000/svg"
+                                d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z"
+                                fill="currentColor" stroke="none" stroke-miterlimit="10" stroke-width="32" />
+                        </svg>
+
+                        <span class="text-xs block">
+                            مشاوره تلفنی
+                        </span>
+
+                        <span class="sr-only">Mobile Contact Us Button</span>
+
+                    </a>
+
+                    <!-- Whatsapp BTN -->
+                    <a href="https://wa.me/989120000000"
+                        class="flex flex-col place-items-center py-2 bg-theme-green text-white text-center rounded-box">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="block mx-auto stroke-current mb-2" width="28"
+                            height="28" fill="none" viewBox="0 0 512 512">
+                            <path
+                                d="M414.73 97.1A222.14 222.14 0 00256.94 32C134 32 33.92 131.58 33.87 254a220.61 220.61 0 0029.78 111L32 480l118.25-30.87a223.63 223.63 0 00106.6 27h.09c122.93 0 223-99.59 223.06-222A220.18 220.18 0 00414.73 97.1zM256.94 438.66h-.08a185.75 185.75 0 01-94.36-25.72l-6.77-4-70.17 18.32 18.73-68.09-4.41-7A183.46 183.46 0 0171.53 254c0-101.73 83.21-184.5 185.48-184.5a185 185 0 01185.33 184.64c-.04 101.74-83.21 184.52-185.4 184.52zm101.69-138.19c-5.57-2.78-33-16.2-38.08-18.05s-8.83-2.78-12.54 2.78-14.4 18-17.65 21.75-6.5 4.16-12.07 1.38-23.54-8.63-44.83-27.53c-16.57-14.71-27.75-32.87-31-38.42s-.35-8.56 2.44-11.32c2.51-2.49 5.57-6.48 8.36-9.72s3.72-5.56 5.57-9.26.93-6.94-.46-9.71-12.54-30.08-17.18-41.19c-4.53-10.82-9.12-9.35-12.54-9.52-3.25-.16-7-.2-10.69-.2a20.53 20.53 0 00-14.86 6.94c-5.11 5.56-19.51 19-19.51 46.28s20 53.68 22.76 57.38 39.3 59.73 95.21 83.76a323.11 323.11 0 0031.78 11.68c13.35 4.22 25.5 3.63 35.1 2.2 10.71-1.59 33-13.42 37.63-26.38s4.64-24.06 3.25-26.37-5.11-3.71-10.69-6.48z"
+                                fill-rule="evenodd" fill="currentColor" />
+                        </svg>
+
+                        <span class="text-xs block">
+                            پشتیبان واتس‌اپ
+                        </span>
+
+                        <span class="sr-only">Mobile Contact Us Button</span>
+
+                    </a>
+
+                    <!-- Telegram BTN -->
+                    <a href="tg://resolve?domain=ariaradco"
+                        class="flex flex-col place-items-center py-2 bg-social-telegram text-white text-center rounded-box">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="block mx-auto stroke-current mb-2" width="28"
+                            height="28" fill="none" viewBox="0 0 512 512">
+                            <path
+                                d="M473 39.05a24 24 0 00-25.5-5.46L47.47 185h-.08a24 24 0 001 45.16l.41.13 137.3 58.63a16 16 0 0015.54-3.59L422 80a7.07 7.07 0 0110 10L226.66 310.26a16 16 0 00-3.59 15.54l58.65 137.38c.06.2.12.38.19.57 3.2 9.27 11.3 15.81 21.09 16.25h1a24.63 24.63 0 0023-15.46L478.39 64.62A24 24 0 00473 39.05z"
+                                fill="currentColor" />
+                        </svg>
+
+                        <span class="text-xs block">
+                            پشتیبان تلگرام
+                        </span>
+
+                        <span class="sr-only">Mobile Contact Us Button</span>
+
+                    </a>
+
+                </div>
+
+                <!-- Close BTN -->
+                <div @click="toggleContact()"
+                    class="absolute rtl:right-2 ltr:left-2 -top-8 flex justify-center items-center text-sm leading-none border border-gray-500 rounded-md cursor-pointer transform active:scale-90 transition-transform px-1 bg-white">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="transform rotate-45 w-4 h-4" viewBox="0 0 512 512">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="48" d="M256 112v288M400 256H112" />
                     </svg>
-                    <span class="text-xs block">
-                        پشتیبان تلگرام
+
+                    <span class="font-medium text-sm rtl:mr-1 ltr:ml-1">
+                        بستن / Close
                     </span>
-                    <span class="sr-only">Mobile Contact Us Button</span>
-                </a>
+
+                </div>
+
             </div>
-
         </div>
         <!-- END: Mobile Contact us Button -->
 
